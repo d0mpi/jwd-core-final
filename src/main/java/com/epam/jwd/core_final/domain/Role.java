@@ -1,6 +1,10 @@
 package com.epam.jwd.core_final.domain;
 
 import com.epam.jwd.core_final.exception.UnknownEntityException;
+import lombok.EqualsAndHashCode;
+
+import java.util.Arrays;
+import java.util.Optional;
 
 public enum Role implements BaseEntity {
     MISSION_SPECIALIST(1L),
@@ -24,14 +28,20 @@ public enum Role implements BaseEntity {
      */
     @Override
     public String getName() {
-        return null;
+        return this.name();
     }
 
     /**
      * todo via java.lang.enum methods!
+     *
      * @throws UnknownEntityException if such id does not exist
      */
-    public static Role resolveRoleById(int id) {
-        return null;
+    public static Role resolveRoleById(int id){
+        Optional<Role> role = Arrays.stream(Role.values()).filter(x -> x.getId().equals((long) id)).findFirst();
+        if (role.isPresent()) {
+            return role.get();
+        } else {
+            throw new UnknownEntityException("Role");
+        }
     }
 }

@@ -1,17 +1,21 @@
 package com.epam.jwd.core_final.context;
 
+import com.epam.jwd.core_final.context.impl.ApplicationMainMenu;
 import com.epam.jwd.core_final.context.impl.NassaContext;
 import com.epam.jwd.core_final.exception.InvalidStateException;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.function.Supplier;
 
-public interface Application {
 
+public interface Application {
     static ApplicationMenu start() throws InvalidStateException {
-        final Supplier<ApplicationContext> applicationContextSupplier = null; // todo
-        final NassaContext nassaContext = new NassaContext();
+        final ApplicationMainMenu applicationMenu = ApplicationMainMenu.getInstance();
+        final Supplier<ApplicationContext> applicationContextSupplier = applicationMenu::getApplicationContext; // todo
+        final NassaContext nassaContext = NassaContext.getInstance();
 
         nassaContext.init();
+
         return applicationContextSupplier::get;
     }
 }

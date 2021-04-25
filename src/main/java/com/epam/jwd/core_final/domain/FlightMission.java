@@ -1,5 +1,14 @@
 package com.epam.jwd.core_final.domain;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Expected fields:
  * <p>
@@ -13,6 +22,44 @@ package com.epam.jwd.core_final.domain;
  * from {@link Planet}
  * to {@link Planet}
  */
+
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class FlightMission extends AbstractBaseEntity {
-    // todo
+    @Getter @Setter
+    private LocalDate startDate;
+    @Getter @Setter
+    private LocalDate endDate;
+    @Getter @Setter
+    private Long distance;
+    @Getter @Setter
+    private Spaceship assignedSpaceship;
+    @Getter @Setter
+    private List<CrewMember> assignedCrew;
+    @Getter @Setter
+    private MissionResult missionResult;
+    @Getter @Setter
+    private Planet from;
+    @Getter @Setter
+    private Planet to;
+
+    public FlightMission(String name, String missionName,
+                         LocalDate startDate, LocalDate endDate,
+                         Long distance,
+                         Planet from, Planet to) {
+        super(name);
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.distance = distance;
+        this.from = from;
+        this.to = to;
+    }
+
+    public void addCrewMember(CrewMember crewMember){
+        if(assignedCrew == null){
+            assignedCrew = new ArrayList<>();
+        } else {
+            assignedCrew.add(crewMember);
+        }
+    }
 }
