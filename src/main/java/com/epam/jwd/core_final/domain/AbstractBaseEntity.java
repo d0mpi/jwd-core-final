@@ -9,7 +9,6 @@ import lombok.ToString;
  * name {@link String} - entity name
  */
 
-@ToString
 public abstract class AbstractBaseEntity implements BaseEntity {
 
     private static Long idCounter = 1L;

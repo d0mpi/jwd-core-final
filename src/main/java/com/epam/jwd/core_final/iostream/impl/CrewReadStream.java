@@ -4,9 +4,11 @@ import com.epam.jwd.core_final.context.impl.NassaContext;
 import com.epam.jwd.core_final.domain.AbstractBaseEntity;
 import com.epam.jwd.core_final.domain.ApplicationProperties;
 import com.epam.jwd.core_final.domain.CrewMember;
+import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.CrewMemberFactory;
 import com.epam.jwd.core_final.iostream.ReadStream;
 import com.epam.jwd.core_final.util.PropertyReaderUtil;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,6 +21,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Slf4j
 public enum CrewReadStream implements ReadStream {
     INSTANCE;
 
@@ -31,7 +34,7 @@ public enum CrewReadStream implements ReadStream {
                 "resources" + fileSeparator +
                 "input" + fileSeparator;
         Path path = Paths.get(inputDirectory + ApplicationProperties.getInstance().getCrewFileName());
-        Scanner scanner = null;
+        Scanner scanner;
         StringBuilder line = new StringBuilder("");
 
         try {
@@ -48,13 +51,15 @@ public enum CrewReadStream implements ReadStream {
 
         Pattern pattern = Pattern.compile("(?<role>[0-9]+),(?<name>[^,]+),(?<rank>[0-9]+);");
         Matcher matcher = pattern.matcher(line);
-
-
         CrewMemberFactory crewMemberFactory = CrewMemberFactory.getInstance();
         while(matcher.find()){
-            crewMemberFactory.create(matcher.group("name"),
-                    matcher.group("role"),
-                    matcher.group("rank"));
+            try {
+                crewMemberFactory.create(matcher.group("name"),
+                        matcher.group("role"),
+                        matcher.group("rank"));
+            } catch (DuplicateEntityNameException e) {
+                log.info("Crew member with this name already exists ");
+            }
         }
         return crewMembers;
     }

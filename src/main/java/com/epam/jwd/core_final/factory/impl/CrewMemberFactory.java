@@ -23,7 +23,7 @@ public class CrewMemberFactory implements EntityFactory<CrewMember> {
     }
 
     @Override
-    public CrewMember create(Object... args) {
+    public CrewMember create(Object... args) throws DuplicateEntityNameException {
         CrewMember crewMember = null;
         try {
             crewMember = new CrewMember(String.valueOf(args[0]),
@@ -31,7 +31,7 @@ public class CrewMemberFactory implements EntityFactory<CrewMember> {
                     Rank.resolveRankById(Integer.parseInt(String.valueOf(args[2]))));
             CrewServiceImpl.getInstance().createCrewMember(crewMember);
             return crewMember;
-        } catch (NumberFormatException | UnknownEntityException | DuplicateEntityNameException e) {
+        } catch (NumberFormatException | UnknownEntityException e) {
             e.printStackTrace();
         }
         return null;

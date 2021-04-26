@@ -24,7 +24,7 @@ public class SpaceshipFactory implements EntityFactory<Spaceship> {
 
     @Override
     @SuppressWarnings("unchecked")
-    public Spaceship create(Object ... args) {
+    public Spaceship create(Object ... args) throws DuplicateEntityNameException {
         Spaceship spaceship = null;
         try {
             spaceship = new Spaceship(String.valueOf(args[0]),
@@ -32,7 +32,7 @@ public class SpaceshipFactory implements EntityFactory<Spaceship> {
                     Long.parseLong(String.valueOf(args[2])));
             SpaceshipServiceImpl.getInstance().createSpaceship(spaceship);
             return spaceship;
-        } catch (NumberFormatException | DuplicateEntityNameException e) {
+        } catch (NumberFormatException e) {
             e.printStackTrace();
         }
         return null;

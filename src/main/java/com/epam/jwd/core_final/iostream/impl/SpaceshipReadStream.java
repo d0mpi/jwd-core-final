@@ -1,9 +1,11 @@
 package com.epam.jwd.core_final.iostream.impl;
 
 import com.epam.jwd.core_final.domain.*;
+import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.CrewMemberFactory;
 import com.epam.jwd.core_final.factory.impl.SpaceshipFactory;
 import com.epam.jwd.core_final.iostream.ReadStream;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +15,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Slf4j
 public enum SpaceshipReadStream implements ReadStream {
     INSTANCE;
 
@@ -39,7 +42,7 @@ public enum SpaceshipReadStream implements ReadStream {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //System.out.println(line);
+
         Pattern pattern = Pattern.compile("(?<name>[a-zA-Z\\s]+);(?<distance>[0-9]+);" +
                 "\\{(?<roleID1>[0-9]+):(?<count1>[0-9]+)," +
                 "(?<roleID2>[0-9]+):(?<count2>[0-9]+)," +
@@ -58,7 +61,11 @@ public enum SpaceshipReadStream implements ReadStream {
                     Short.parseShort(matcher.group("count3")));
             crewRoleMap.put(Role.resolveRoleById(Integer.parseInt(matcher.group("roleID4"))),
                     Short.parseShort(matcher.group("count4")));
-            spaceshipFactory.create(matcher.group("name"),crewRoleMap,matcher.group("distance"));
+            try {
+                spaceshipFactory.create(matcher.group("name"),crewRoleMap,matcher.group("distance"));
+            } catch (DuplicateEntityNameException e) {
+                log.info("Spaceship with this name already exists");
+            }
         }
         return spaceships;
     }

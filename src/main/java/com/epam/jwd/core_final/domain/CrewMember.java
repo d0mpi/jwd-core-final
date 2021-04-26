@@ -12,9 +12,7 @@ import lombok.ToString;
  * rank {@link Rank} - member rank
  * isReadyForNextMissions {@link Boolean} - true by default. Set to false, after first failed mission
  */
-
 @EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
 public class CrewMember extends AbstractBaseEntity {
     @Getter
     @Setter
@@ -31,5 +29,12 @@ public class CrewMember extends AbstractBaseEntity {
         this.role = role;
         this.rank = rank;
         this.isReadyForNextMission = true;
+    }
+
+    @Override
+    public String toString() {
+        return "CrewMember " + this.getName() +
+                " : id=" + this.getId() + ", role=" + role + ",  rank=" + rank + ", " +
+                (isReadyForNextMission ? "ReadyForNextMission;" : "NotReadyForNextMission;");
     }
 }

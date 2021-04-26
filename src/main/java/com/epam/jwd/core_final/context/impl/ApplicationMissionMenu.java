@@ -2,38 +2,35 @@ package com.epam.jwd.core_final.context.impl;
 
 import com.epam.jwd.core_final.context.ApplicationMenu;
 import com.epam.jwd.core_final.iostream.OutputTemplates;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.Scanner;
 
-@Slf4j
-public class ApplicationMainMenu implements ApplicationMenu {
-
+public class ApplicationMissionMenu implements ApplicationMenu {
     private static class SingletonHolder {
-        private static final ApplicationMainMenu instance = new ApplicationMainMenu();
+        private static final ApplicationMissionMenu instance = new ApplicationMissionMenu();
     }
 
-    public static ApplicationMainMenu getInstance() {
-        return ApplicationMainMenu.SingletonHolder.instance;
+    public static ApplicationMissionMenu getInstance() {
+        return ApplicationMissionMenu.SingletonHolder.instance;
     }
 
-    private ApplicationMainMenu() {
+    private ApplicationMissionMenu() {
     }
 
     @Override
     public void getApplicationContext() {
+        clearConsole();
         printAvailableOptions();
         waitAndReadUserInput();
     }
 
     @Override
     public void printAvailableOptions() {
-        clearConsole();
-        System.out.println(OutputTemplates.MAIN_MENU.getText());
+        System.out.println(OutputTemplates.MISSION_MENU.getText());
     }
 
     @Override
-    public void waitAndReadUserInput() throws IllegalArgumentException {
+    public void waitAndReadUserInput() {
         System.out.println("Choose menu option (1-5):");
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextShort()) {
@@ -48,17 +45,22 @@ public class ApplicationMainMenu implements ApplicationMenu {
     public void handleUserInput(Short option) {
         switch (option) {
             case 1:
-                ApplicationCrewMenu.getInstance().getApplicationContext();
+                System.out.println(1);
+                waitAndReadUserInput();
             case 2:
-                ApplicationSpaceshipMenu.getInstance().getApplicationContext();
+                System.out.println(2);
+                waitAndReadUserInput();
             case 3:
-                ApplicationMissionMenu.getInstance().getApplicationContext();
+                System.out.println(3);
+                waitAndReadUserInput();
             case 4:
                 System.out.println(4);
                 waitAndReadUserInput();
             case 5:
-                System.out.println("Shutting down the program...");
-                System.exit(0);
+                System.out.println(4);
+                waitAndReadUserInput();
+            case 6:
+                ApplicationMainMenu.getInstance().getApplicationContext();
             default:
                 System.out.println("The option with the entered number does not exist. Please try again.");
                 waitAndReadUserInput();

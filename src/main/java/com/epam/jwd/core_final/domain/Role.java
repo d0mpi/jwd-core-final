@@ -41,7 +41,7 @@ public enum Role implements BaseEntity {
         if (role.isPresent()) {
             return role.get();
         } else {
-            throw new UnknownEntityException("Role");
+            throw new UnknownEntityException("UnknownEntityException");
         }
     }
 }

@@ -15,7 +15,7 @@ public interface MissionService {
 
     Optional<FlightMission> findMissionByCriteria(Criteria<? extends FlightMission> criteria);
 
-    FlightMission updateFlightMissionDetails(FlightMission flightMission);
+    FlightMission updateFlightMissionDetails(FlightMission flightMission) throws DuplicateEntityNameException;
 
     FlightMission createMission(FlightMission flightMission) throws DuplicateEntityNameException;
 }
