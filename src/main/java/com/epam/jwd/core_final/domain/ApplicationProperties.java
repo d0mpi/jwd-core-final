@@ -36,6 +36,8 @@ public class ApplicationProperties {
     Integer fileRefreshRate;
     @Getter
     String dateTimeFormat;
+    @Getter
+    String timetableFileName;
 
     private static class SingletonHolder {
         private static final ApplicationProperties instance = new ApplicationProperties();
@@ -53,5 +55,6 @@ public class ApplicationProperties {
         this.spaceMapFileName =  PropertyReaderUtil.getProperties().getProperty("spaceMapFileName");
         this.fileRefreshRate =  Integer.parseInt(PropertyReaderUtil.getProperties().getProperty("fileRefreshRate"));
         this.dateTimeFormat =  PropertyReaderUtil.getProperties().getProperty("dateTimeFormat");
+        this.timetableFileName =  PropertyReaderUtil.getProperties().getProperty("timetableFileName");
     }
 }

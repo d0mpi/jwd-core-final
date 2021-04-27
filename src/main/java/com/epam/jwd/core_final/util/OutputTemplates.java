@@ -1,4 +1,4 @@
-package com.epam.jwd.core_final.iostream;
+package com.epam.jwd.core_final.util;
 
 import lombok.Getter;
 
@@ -8,7 +8,7 @@ public enum OutputTemplates {
             1) Crew menu
             2) Spaceship menu
             3) Mission menu
-            4) coming soon...
+            4) Planet menu
             5) Exit the program
             """),
     SPACESHIP_MENU("""
@@ -29,12 +29,18 @@ public enum OutputTemplates {
             """),
     MISSION_MENU("""
             Flight mission menu
-            1) Create flight mission
-            2) Generate flight mission
-            3) Show all missions
-            4) Print all missions to file
-            5) Real-time timetable
-            6) Back to main menu
+            1) Generate flight mission
+            2) Show all missions
+            3) Print all missions to file
+            4) Real-time timetable
+            5) Back to main menu
+            """),
+    PLANET_MENU("""
+            Planet menu
+            1) Create planet
+            2) Generate planet
+            3) Show all planets
+            4) Back to main menu
             """),
     ROLE_LIST("""
             

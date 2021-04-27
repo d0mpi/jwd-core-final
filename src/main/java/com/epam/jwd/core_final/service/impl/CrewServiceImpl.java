@@ -3,7 +3,9 @@ package com.epam.jwd.core_final.service.impl;
 import com.epam.jwd.core_final.context.impl.NassaContext;
 import com.epam.jwd.core_final.criteria.CrewMemberCriteria;
 import com.epam.jwd.core_final.criteria.Criteria;
+import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
 import com.epam.jwd.core_final.domain.CrewMember;
+import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.exception.NotReadyEntityException;
 import com.epam.jwd.core_final.service.CrewService;
@@ -42,7 +44,16 @@ public class CrewServiceImpl implements CrewService {
     }
 
     @Override
-    public CrewMember updateCrewMemberDetails(CrewMember crewMember) {
+    public CrewMember updateCrewMemberDetails(CrewMember crewMember) throws DuplicateEntityNameException {
+        CrewMember crewMemberFromCollection = findCrewMemberByCriteria(CrewMemberCriteria.builder()
+                .name(crewMember.getName()).build()).orElse(null);
+        if (crewMemberFromCollection == null) {
+            createCrewMember(crewMember);
+        } else {
+            crewMemberFromCollection.setRank(crewMember.getRank());
+            crewMemberFromCollection.setRole(crewMember.getRole());
+            crewMemberFromCollection.setIsReadyForNextMission(crewMember.getIsReadyForNextMission());
+        }
         return crewMember;
     }
 

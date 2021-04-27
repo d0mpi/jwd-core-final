@@ -24,7 +24,6 @@ import java.util.List;
  */
 
 @EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
 public class FlightMission extends AbstractBaseEntity {
     @Getter @Setter
     private LocalDate startDate;
@@ -43,7 +42,7 @@ public class FlightMission extends AbstractBaseEntity {
     @Getter @Setter
     private Planet to;
 
-    public FlightMission(String name, String missionName,
+    public FlightMission(String name,
                          LocalDate startDate, LocalDate endDate,
                          Long distance,
                          Planet from, Planet to) {
@@ -55,11 +54,18 @@ public class FlightMission extends AbstractBaseEntity {
         this.to = to;
     }
 
-    public void addCrewMember(CrewMember crewMember){
-        if(assignedCrew == null){
-            assignedCrew = new ArrayList<>();
-        } else {
-            assignedCrew.add(crewMember);
-        }
+    @Override
+    public String toString() {
+        return "FlightMission " + getName() + " id=" + getId() +
+                "\nstartDate=" + startDate +
+                ", endDate=" + endDate +
+                ", distance=" + distance +
+                ", assignedSpaceship=" + assignedSpaceship +
+                "\nAssignedCrew= {"
+                + assignedCrew.toString() +
+                "\nMissionResult=" + missionResult +
+                ", from " + from +
+                ", to " + to +
+                '}';
     }
 }

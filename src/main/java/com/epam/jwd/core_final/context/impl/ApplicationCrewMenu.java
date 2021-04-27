@@ -7,7 +7,7 @@ import com.epam.jwd.core_final.domain.Rank;
 import com.epam.jwd.core_final.domain.Role;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.CrewMemberFactory;
-import com.epam.jwd.core_final.iostream.OutputTemplates;
+import com.epam.jwd.core_final.util.OutputTemplates;
 import com.epam.jwd.core_final.service.impl.CrewServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,7 +32,7 @@ public class ApplicationCrewMenu implements ApplicationMenu {
     public void getApplicationContext() {
         clearConsole();
         printAvailableOptions();
-        waitAndReadUserInput();
+        readMenuOptionInput();
     }
 
     @Override
@@ -41,14 +41,17 @@ public class ApplicationCrewMenu implements ApplicationMenu {
     }
 
     @Override
-    public void waitAndReadUserInput() {
-        System.out.println("Choose menu option (1-5):");
+    public void readMenuOptionInput() {
+
         Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextShort()) {
-            handleUserInput(scanner.nextShort());
-        } else {
-            System.out.println("Invalid value was entered. Please try again.");
-            waitAndReadUserInput();
+        while (true) {
+            try {
+                System.out.println("Choose menu option (1-5):");
+                handleUserInput(Short.parseShort(scanner.nextLine()));
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid value was entered. Please try again.");
+            }
         }
     }
 
@@ -59,27 +62,27 @@ public class ApplicationCrewMenu implements ApplicationMenu {
                 clearConsole();
                 createCrewMemberByUser();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 2:
                 clearConsole();
                 generateRandomCrewMember();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 3:
                 clearConsole();
                 showAllCrewMembers();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 4:
                 clearConsole();
                 showAvailableCrewMembers();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 5:
                 ApplicationMainMenu.getInstance().getApplicationContext();
             default:
                 System.out.println("The option with the entered number does not exist. Please try again.");
-                waitAndReadUserInput();
+                readMenuOptionInput();
         }
     }
 
@@ -94,8 +97,12 @@ public class ApplicationCrewMenu implements ApplicationMenu {
     public void showAvailableCrewMembers() {
         LinkedList<CrewMember> crewMembers = new LinkedList<>(CrewServiceImpl.getInstance().
                 findAllCrewMembersByCriteria(CrewMemberCriteria.builder().isReadyForNextMission(true).build()));
-        for (CrewMember crewMember : crewMembers) {
-            System.out.println(crewMember.toString());
+        if (crewMembers.size() != 0) {
+            for (CrewMember crewMember : crewMembers) {
+                System.out.println(crewMember.toString());
+            }
+        } else {
+            System.out.println("No crew members has been created yet");
         }
         System.out.println();
     }
@@ -108,8 +115,8 @@ public class ApplicationCrewMenu implements ApplicationMenu {
         String name = scanner.nextLine();
         int role = readRoleId(), rank = readRankId();
 
-        CrewMember crewMember = null;
-        while(true) {
+        CrewMember crewMember;
+        while (true) {
             try {
                 crewMember = CrewMemberFactory.getInstance().create(name, role, rank);
                 break;
@@ -123,32 +130,44 @@ public class ApplicationCrewMenu implements ApplicationMenu {
         System.out.println(crewMember.toString() + " was created successfully\n");
     }
 
-    public int readRankId() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(OutputTemplates.ROLE_LIST.getText());
-        do {
-            System.out.println("Choose role id (1-4):");
-            if (scanner.hasNextShort()) {
-                return scanner.nextShort();
-            } else {
-                System.out.println("Invalid value was entered. Please try again.");
-                waitAndReadUserInput();
-            }
-        } while (true);
-    }
-
     public int readRoleId() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(OutputTemplates.RANK_LIST.getText());
-        do {
-            System.out.println("Choose rank id (1-4):");
-            if (scanner.hasNextShort()) {
-                return scanner.nextShort();
-            } else {
+        System.out.println(OutputTemplates.ROLE_LIST.getText());
+        while (true) {
+            System.out.println("Choose role id (1-" + Role.values().length + "):");
+            short id;
+            try {
+                id = Short.parseShort(scanner.nextLine());
+                if (id <= Role.values().length && id >= 1) {
+                    return id;
+                } else {
+                    System.out.println("Invalid value was entered. Please try again.");
+                }
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid value was entered. Please try again.");
-                waitAndReadUserInput();
             }
-        } while (true);
+        }
+    }
+
+    public int readRankId() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(OutputTemplates.RANK_LIST.getText());
+        while (true) {
+            System.out.println("Choose rank id (1-" + Rank.values().length + "):");
+            short id;
+            try {
+                id = Short.parseShort(scanner.nextLine());
+                if (id <= Rank.values().length && id >= 1) {
+                    return id;
+                } else {
+                    System.out.println("Invalid value was entered. Please try again.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid value was entered. Please try again.");
+            }
+
+
+        }
     }
 
     public void generateRandomCrewMember() {
@@ -160,7 +179,7 @@ public class ApplicationCrewMenu implements ApplicationMenu {
         int role = random.nextInt(Role.values().length - 1) + 1,
                 rank = random.nextInt(Rank.values().length - 1) + 1;
         CrewMember crewMember;
-        while(true) {
+        while (true) {
             try {
                 crewMember = CrewMemberFactory.getInstance().create(name, role, rank);
                 break;

@@ -49,10 +49,18 @@ public class MissionServiceImpl implements MissionService {
     public FlightMission updateFlightMissionDetails(FlightMission flightMission) throws DuplicateEntityNameException {
         FlightMission flightMissionFromCollection = findMissionByCriteria(FlightMissionCriteria.builder()
                 .name(flightMission.getName()).build()).orElse(null);
-        if (flightMissionFromCollection != null) {
-            deleteFlightMission(flightMission.getName());
+        if (flightMissionFromCollection == null) {
+            createMission(flightMission);
+        } else {
+            flightMissionFromCollection.setMissionResult(flightMission.getMissionResult());
+            flightMissionFromCollection.setFrom(flightMission.getFrom());
+            flightMissionFromCollection.setTo(flightMission.getTo());
+            flightMissionFromCollection.setAssignedCrew(flightMission.getAssignedCrew());
+            flightMissionFromCollection.setDistance(flightMissionFromCollection.getDistance());
+            flightMissionFromCollection.setEndDate(flightMission.getEndDate());
+            flightMissionFromCollection.setStartDate(flightMission.getStartDate());
+            flightMissionFromCollection.setAssignedSpaceship(flightMission.getAssignedSpaceship());
         }
-        createMission(flightMission);
         return flightMission;
     }
 
@@ -73,7 +81,7 @@ public class MissionServiceImpl implements MissionService {
         if(flightMission == null) {
             log.info("Mission with this name does not exists");
         } else {
-            flightMissions.remove(flightMission);
+            NassaContext.getInstance().retrieveBaseEntityList(FlightMission.class).remove(flightMission);
         }
     }
 

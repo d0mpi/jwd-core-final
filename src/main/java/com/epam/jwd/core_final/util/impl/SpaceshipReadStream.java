@@ -1,10 +1,9 @@
-package com.epam.jwd.core_final.iostream.impl;
+package com.epam.jwd.core_final.util.impl;
 
 import com.epam.jwd.core_final.domain.*;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
-import com.epam.jwd.core_final.factory.impl.CrewMemberFactory;
 import com.epam.jwd.core_final.factory.impl.SpaceshipFactory;
-import com.epam.jwd.core_final.iostream.ReadStream;
+import com.epam.jwd.core_final.util.ReadStream;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
@@ -20,16 +19,16 @@ public enum SpaceshipReadStream implements ReadStream {
     INSTANCE;
 
     @Override
-    public List<Spaceship> readData() {
+    public void readData() {
         List<Spaceship> spaceships = new ArrayList<>();
         char fileSeparator = File.separatorChar;
         String inputDirectory = "src" + fileSeparator +
                 "main" + fileSeparator +
                 "resources" + fileSeparator +
-                "input" + fileSeparator;
+                ApplicationProperties.getInstance().getInputRootDir() + fileSeparator;
         Path path = Paths.get(inputDirectory + ApplicationProperties.getInstance().getSpaceshipsFileName());
         Scanner scanner = null;
-        StringBuilder line = new StringBuilder("");
+        StringBuilder line = new StringBuilder();
 
         try {
             scanner = new Scanner(path);
@@ -67,6 +66,5 @@ public enum SpaceshipReadStream implements ReadStream {
                 log.info("Spaceship with this name already exists");
             }
         }
-        return spaceships;
     }
 }

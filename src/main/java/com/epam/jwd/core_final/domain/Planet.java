@@ -3,6 +3,8 @@ package com.epam.jwd.core_final.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Random;
+
 /**
  * Expected fields:
  * <p>
@@ -17,4 +19,10 @@ public class Planet extends AbstractBaseEntity {
         super(name);
         this.coordinates = coordinates;
     }
+
+    @Override
+    public String toString() {
+        return "Planet " + getName() + " (" + coordinates.getX() + ";" + coordinates.getY() + ")";
+    }
+
 }

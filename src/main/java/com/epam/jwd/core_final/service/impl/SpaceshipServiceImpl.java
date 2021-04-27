@@ -3,6 +3,7 @@ package com.epam.jwd.core_final.service.impl;
 import com.epam.jwd.core_final.context.impl.NassaContext;
 import com.epam.jwd.core_final.criteria.CrewMemberCriteria;
 import com.epam.jwd.core_final.criteria.Criteria;
+import com.epam.jwd.core_final.criteria.FlightMissionCriteria;
 import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
 import com.epam.jwd.core_final.domain.CrewMember;
 import com.epam.jwd.core_final.domain.FlightMission;
@@ -49,7 +50,16 @@ public class SpaceshipServiceImpl implements SpaceshipService {
     }
 
     @Override
-    public Spaceship updateSpaceshipDetails(Spaceship spaceship) {
+    public Spaceship updateSpaceshipDetails(Spaceship spaceship) throws DuplicateEntityNameException {
+        Spaceship spaceshipFromCollection = findSpaceshipByCriteria(SpaceshipCriteria.builder()
+                .name(spaceship.getName()).build()).orElse(null);
+        if (spaceshipFromCollection == null) {
+            createSpaceship(spaceship);
+        } else {
+            spaceshipFromCollection.setCrew(spaceship.getCrew());
+            spaceshipFromCollection.setFlightDistance(spaceship.getFlightDistance());
+            spaceshipFromCollection.setIsReadyForNextMission(spaceship.getIsReadyForNextMission());
+        }
         return spaceship;
     }
 
@@ -79,22 +89,21 @@ public class SpaceshipServiceImpl implements SpaceshipService {
     private Stream<Spaceship> buildFilter(SpaceshipCriteria spaceshipCriteria) {
         Stream<Spaceship> stream = spaceships.stream();
         if (spaceshipCriteria.getId() != null) {
-            stream = stream.filter(crewMember -> crewMember.getId().equals(spaceshipCriteria.getId()));
+            stream = stream.filter(spaceship -> spaceship.getId().equals(spaceshipCriteria.getId()));
         }
         if (spaceshipCriteria.getName() != null) {
-            stream = stream.filter(crewMember -> crewMember.getName()
+            stream = stream.filter(spaceship -> spaceship.getName()
                     .equalsIgnoreCase(spaceshipCriteria.getName()));
         }
         if (spaceshipCriteria.getIsReadyForNextMission() != null) {
-            stream = stream.filter(crewMember -> crewMember.getIsReadyForNextMission()
+            stream = stream.filter(spaceship -> spaceship.getIsReadyForNextMission()
                     .equals(spaceshipCriteria.getIsReadyForNextMission()));
         }
-        if (spaceshipCriteria.getFlightDistance() != null) {
-            stream = stream.filter(crewMember -> crewMember.getFlightDistance()
-                    .equals(spaceshipCriteria.getFlightDistance()));
+        if (spaceshipCriteria.getMinFlightDistance() != null) {
+            stream = stream.filter(spaceship -> spaceship.getFlightDistance() >= spaceshipCriteria.getMinFlightDistance());
         }
         if (spaceshipCriteria.getCrew() != null) {
-            stream = stream.filter(crewMember -> crewMember.getCrew()
+            stream = stream.filter(spaceship -> spaceship.getCrew()
                     .equals(spaceshipCriteria.getCrew()));
         }
         return stream;

@@ -2,14 +2,11 @@ package com.epam.jwd.core_final.context.impl;
 
 import com.epam.jwd.core_final.context.ApplicationMenu;
 import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
-import com.epam.jwd.core_final.domain.CrewMember;
-import com.epam.jwd.core_final.domain.Rank;
 import com.epam.jwd.core_final.domain.Role;
 import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
-import com.epam.jwd.core_final.factory.impl.CrewMemberFactory;
 import com.epam.jwd.core_final.factory.impl.SpaceshipFactory;
-import com.epam.jwd.core_final.iostream.OutputTemplates;
+import com.epam.jwd.core_final.util.OutputTemplates;
 import com.epam.jwd.core_final.service.impl.SpaceshipServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,7 +29,7 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
     public void getApplicationContext() {
         clearConsole();
         printAvailableOptions();
-        waitAndReadUserInput();
+        readMenuOptionInput();
     }
 
     @Override
@@ -41,14 +38,16 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
     }
 
     @Override
-    public void waitAndReadUserInput() {
-        System.out.println("Choose menu option (1-5):");
+    public void readMenuOptionInput() {
         Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextShort()) {
-            handleUserInput(scanner.nextShort());
-        } else {
-            System.out.println("Invalid value was entered. Please try again.");
-            waitAndReadUserInput();
+        while (true) {
+            try {
+                System.out.println("Choose menu option (1-5):");
+                handleUserInput(Short.parseShort(scanner.nextLine()));
+                break;
+            } catch (Exception e) {
+                System.out.println("Invalid value was entered. Please try again.");
+            }
         }
     }
 
@@ -59,27 +58,27 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
                 clearConsole();
                 createSpaceshipByUser();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 2:
                 clearConsole();
                 generateRandomSpaceship();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 3:
                 clearConsole();
                 showAllSpaceships();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 4:
                 clearConsole();
                 showAvailableSpaceships();
                 printAvailableOptions();
-                waitAndReadUserInput();
+                readMenuOptionInput();
             case 5:
                 ApplicationMainMenu.getInstance().getApplicationContext();
             default:
                 System.out.println("The option with the entered number does not exist. Please try again.");
-                waitAndReadUserInput();
+                readMenuOptionInput();
         }
     }
 
@@ -126,31 +125,29 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
 
     public long readFlightDistance() {
         Scanner scanner = new Scanner(System.in);
-        do {
+        while(true) {
             System.out.println("Enter flight distance:");
-            if (scanner.hasNextLong()) {
-                return scanner.nextLong();
-            } else {
+            try{
+                return Long.parseLong(scanner.nextLine());
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid value was entered. Please try again.");
-                waitAndReadUserInput();
             }
-        } while (true);
+        }
     }
 
     public Map<Role, Short> readCrewMap() {
         Scanner scanner = new Scanner(System.in);
         Map<Role, Short> crew = new HashMap<>();
         int countOfRoles = Role.values().length;
-        do {
+        while(countOfRoles > 0) {
             System.out.println("Enter the number of " + Role.resolveRoleById(countOfRoles) + " in the crew:");
-            if (scanner.hasNextShort()) {
-                crew.put(Role.resolveRoleById(countOfRoles), scanner.nextShort());
+            try {
+                crew.put(Role.resolveRoleById(countOfRoles), Short.parseShort(scanner.nextLine()));
                 countOfRoles--;
-            } else {
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid value was entered. Please try again.");
-                waitAndReadUserInput();
             }
-        } while (countOfRoles > 0);
+        }
         return crew;
     }
 
@@ -165,7 +162,7 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
         Map<Role, Short> crewMap = new HashMap<>();
         int sumCrew = 0, temp;
         for (int i = 1; i <= Role.values().length; i++) {
-            temp = random.nextInt(5);
+            temp = random.nextInt(4);
             crewMap.put(Role.resolveRoleById(i), (short) temp);
             sumCrew += temp;
         }

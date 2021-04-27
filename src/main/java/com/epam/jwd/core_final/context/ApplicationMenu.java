@@ -7,7 +7,7 @@ public interface ApplicationMenu {
 
     void getApplicationContext();
     void printAvailableOptions();
-    void waitAndReadUserInput();
+    void readMenuOptionInput();
     void handleUserInput(Short option) throws IOException, InterruptedException;
     
     default void clearConsole(){

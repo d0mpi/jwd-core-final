@@ -13,14 +13,14 @@ public class SpaceshipCriteria extends Criteria<Spaceship> {
     @Getter
     private final Map<Role, Short> crew;
     @Getter
-    private final Long flightDistance;
+    private final Long minFlightDistance;
     @Getter
     private final Boolean isReadyForNextMission;
 
     public SpaceshipCriteria(Long id,String name, Map<Role, Short> crew, Long flightDistance, Boolean isReadyForNextMission) {
         super(id,name);
         this.crew = crew;
-        this.flightDistance = flightDistance;
+        this.minFlightDistance = flightDistance;
         this.isReadyForNextMission = isReadyForNextMission;
     }
 
@@ -47,8 +47,8 @@ public class SpaceshipCriteria extends Criteria<Spaceship> {
             this.crew = crew;
             return this;
         }
-        public Builder flightDistance(Long flightDistance){
-            this.flightDistance = flightDistance;
+        public Builder minFlightDistance(Long minFlightDistance){
+            this.flightDistance = minFlightDistance;
             return this;
         }
         public Builder isReadyForNextMission(Boolean isReadyForNextMission){

@@ -109,5 +109,4 @@ public class FlightMissionCriteria extends Criteria<FlightMission> {
                     from, to);
         }
     }
-
 }

@@ -3,16 +3,13 @@ package com.epam.jwd.core_final.context.impl;
 import com.epam.jwd.core_final.context.ApplicationContext;
 import com.epam.jwd.core_final.domain.*;
 import com.epam.jwd.core_final.exception.InvalidStateException;
-import com.epam.jwd.core_final.factory.impl.CrewMemberFactory;
-import com.epam.jwd.core_final.iostream.impl.CrewReadStream;
-import com.epam.jwd.core_final.iostream.impl.SpaceshipReadStream;
-import com.epam.jwd.core_final.util.PropertyReaderUtil;
-import lombok.Getter;
+import com.epam.jwd.core_final.util.impl.CrewReadStream;
+import com.epam.jwd.core_final.util.impl.PlanetReadStream;
+import com.epam.jwd.core_final.util.impl.SpaceshipReadStream;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Properties;
 
 // todo
 @Slf4j
@@ -21,7 +18,8 @@ public class NassaContext implements ApplicationContext {
     // no getters/setters for them
     private final Collection<CrewMember> crewMembers = new ArrayList<>();
     private final Collection<Spaceship> spaceships = new ArrayList<>();
-    private final Collection<Planet> planetMap = new ArrayList<>();
+    private final ArrayList<Planet> planetMap = new ArrayList<>();
+    private final Collection<FlightMission> flightMissions = new ArrayList<>();
 
     private static class SingletonHolder {
         private static final NassaContext instance = new NassaContext();
@@ -42,7 +40,9 @@ public class NassaContext implements ApplicationContext {
         } else if (tClass.getName().equals(Spaceship.class.getName())) {
             return (Collection<T>) spaceships;
         } else if (tClass.getName().equals(Planet.class.getName())) {
-            return (Collection<T>) planetMap;
+            return (Collection<T>) planetMap;}
+        else if (tClass.getName().equals(FlightMission.class.getName())) {
+            return (Collection<T>) flightMissions;
         } else {
             return null;
         }
@@ -57,6 +57,7 @@ public class NassaContext implements ApplicationContext {
     public void init() throws InvalidStateException {
         CrewReadStream.INSTANCE.readData();
         SpaceshipReadStream.INSTANCE.readData();
+        PlanetReadStream.INSTANCE.readData();
         log.info("Data has been reading successfully");
     }
 }
