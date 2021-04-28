@@ -9,222 +9,19 @@ No missions have been created so far
 
 
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @                                                                              @
 @ Earth time: 2021-05-09                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-18                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: hekios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Frazer Carr,Marta Hendrix,
-@ Kayleigh Sellers,Cerys Mcdonnell,Talia Mcnamara,Kaja Rogers,Annabella Lambert,
-@ Asiyah Haines,Neave Mustafa,Zoe Day,Isabelle Person,Azra Hastings,
-@ Aronas Paul,Alanah Stanton,Davey Bentley,Sara Barnes,Adele Mckeown,
+@ NAME: SpaceShuttle | STATUS: PLANNED | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
 @ 
-@ START: Taris | FINISH: Kamino | START DATE: 2021-06-09 | END DATE: 2021-07-31
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-28                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: hekios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Frazer Carr,Marta Hendrix,
-@ Kayleigh Sellers,Cerys Mcdonnell,Talia Mcnamara,Kaja Rogers,Annabella Lambert,
-@ Asiyah Haines,Neave Mustafa,Zoe Day,Isabelle Person,Azra Hastings,
-@ Aronas Paul,Alanah Stanton,Davey Bentley,Sara Barnes,Adele Mckeown,
-@ 
-@ START: Taris | FINISH: Kamino | START DATE: 2021-06-09 | END DATE: 2021-07-31
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-07-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: hekios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Frazer Carr,Marta Hendrix,
-@ Kayleigh Sellers,Cerys Mcdonnell,Talia Mcnamara,Kaja Rogers,Annabella Lambert,
-@ Asiyah Haines,Neave Mustafa,Zoe Day,Isabelle Person,Azra Hastings,
-@ Aronas Paul,Alanah Stanton,Davey Bentley,Sara Barnes,Adele Mckeown,
-@ 
-@ START: Taris | FINISH: Kamino | START DATE: 2021-06-09 | END DATE: 2021-07-31
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-07-18                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: hekios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Frazer Carr,Marta Hendrix,
-@ Kayleigh Sellers,Cerys Mcdonnell,Talia Mcnamara,Kaja Rogers,Annabella Lambert,
-@ Asiyah Haines,Neave Mustafa,Zoe Day,Isabelle Person,Azra Hastings,
-@ Aronas Paul,Alanah Stanton,Davey Bentley,Sara Barnes,Adele Mckeown,
-@ 
-@ START: Taris | FINISH: Kamino | START DATE: 2021-06-09 | END DATE: 2021-07-31
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: PLANNED | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Frazer Carr,Marta Hendrix,
-@ Kayleigh Sellers,Cerys Mcdonnell,Talia Mcnamara,Kaja Rogers,Annabella Lambert,
-@ Asiyah Haines,Neave Mustafa,Zoe Day,Isabelle Person,Azra Hastings,
-@ Aronas Paul,Alanah Stanton,Davey Bentley,Sara Barnes,Adele Mckeown,
-@ 
-@ START: Venus | FINISH: Manaan | START DATE: 2021-05-23 | END DATE: 2021-11-30
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
 @_______________________________________________________________________________
 
 
@@ -236,24 +33,24 @@ No missions have been created so far
 @ Earth time: 2021-05-19                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: PLANNED | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Frazer Carr,Marta Hendrix,
-@ Kayleigh Sellers,Cerys Mcdonnell,Talia Mcnamara,Kaja Rogers,Annabella Lambert,
-@ Asiyah Haines,Neave Mustafa,Zoe Day,Isabelle Person,Azra Hastings,
-@ Aronas Paul,Alanah Stanton,Davey Bentley,Sara Barnes,Adele Mckeown,
+@ NAME: SpaceShuttle | STATUS: PLANNED | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
 @ 
-@ START: Venus | FINISH: Manaan | START DATE: 2021-05-23 | END DATE: 2021-11-30
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
 @_______________________________________________________________________________
-@ NAME: ewtwe | STATUS: PLANNED | SPACESHIP: Intelligence
-@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Alfie Sosa,
-@ Elisabeth Gross,Ed Thatcher,Nyle Sanders,Nusaybah Buck,Haleema Wills,
-@ Om Currie,Harlee Mata,Cobie Coles,Melisa Villalobos,Kiran Burns,
-@ Beatrix Mcdonald,Karan Avalos,Stefania Redmond,Jozef Braun,Darien Blanchard,
+@ NAME: Pioneer | STATUS: PLANNED | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
 @ 
-@ START: Hoth | FINISH: Naboo | START DATE: 2021-05-22 | END DATE: 2021-09-05
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
 @_______________________________________________________________________________
-@ NAME: rwgwe | STATUS: FAILED
-@ START: Haumea | FINISH: Mercury | START DATE: 2021-05-23 | END DATE: 2021-08-04
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -265,123 +62,24 @@ No missions have been created so far
 @ Earth time: 2021-05-29                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Frazer Carr,Marta Hendrix,
-@ Kayleigh Sellers,Cerys Mcdonnell,Talia Mcnamara,Kaja Rogers,Annabella Lambert,
-@ Asiyah Haines,Neave Mustafa,Zoe Day,Isabelle Person,Azra Hastings,
-@ Aronas Paul,Alanah Stanton,Davey Bentley,Sara Barnes,Adele Mckeown,
+@ NAME: SpaceShuttle | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
 @ 
-@ START: Venus | FINISH: Manaan | START DATE: 2021-05-23 | END DATE: 2021-11-30
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
 @_______________________________________________________________________________
-@ NAME: ewtwe | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
-@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Alfie Sosa,
-@ Elisabeth Gross,Ed Thatcher,Nyle Sanders,Nusaybah Buck,Haleema Wills,
-@ Om Currie,Harlee Mata,Cobie Coles,Melisa Villalobos,Kiran Burns,
-@ Beatrix Mcdonald,Karan Avalos,Stefania Redmond,Jozef Braun,Darien Blanchard,
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
 @ 
-@ START: Hoth | FINISH: Naboo | START DATE: 2021-05-22 | END DATE: 2021-09-05
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
 @_______________________________________________________________________________
-@ NAME: rwgwe | STATUS: FAILED
-@ START: Haumea | FINISH: Mercury | START DATE: 2021-05-23 | END DATE: 2021-08-04
-@_______________________________________________________________________________
-@ NAME: moon | STATUS: FAILED
-@ START: Leviathan | FINISH: Starkiller | START DATE: 2021-05-26 | END DATE: 2021-10-26
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -393,67 +91,24 @@ No missions have been created so far
 @ Earth time: 2021-06-08                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -465,7 +120,24 @@ No missions have been created so far
 @ Earth time: 2021-06-18                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
+@_______________________________________________________________________________
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
+@_______________________________________________________________________________
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -477,7 +149,24 @@ No missions have been created so far
 @ Earth time: 2021-06-28                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
+@_______________________________________________________________________________
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
+@_______________________________________________________________________________
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -489,7 +178,24 @@ No missions have been created so far
 @ Earth time: 2021-07-08                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
+@_______________________________________________________________________________
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
+@_______________________________________________________________________________
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -501,7 +207,24 @@ No missions have been created so far
 @ Earth time: 2021-07-18                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
+@_______________________________________________________________________________
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
+@_______________________________________________________________________________
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -513,739 +236,24 @@ No missions have been created so far
 @ Earth time: 2021-07-28                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-18                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-27                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-10                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-12                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-12                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-20                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-07-07                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-07-18                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-09-01                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-09-15                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-09-23                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-10-05                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-10-20                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-11-11                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-11-14                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-11-14                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-11-14                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-11-14                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-11-14                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-18                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-28                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-07-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-07-18                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-07-28                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -1257,7 +265,24 @@ No missions have been created so far
 @ Earth time: 2021-08-07                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: COMPLETED | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
+@_______________________________________________________________________________
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
+@_______________________________________________________________________________
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -1266,10 +291,27 @@ No missions have been created so far
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @                                                                              @
-@ Earth time: 2021-04-29                                                       @
+@ Earth time: 2021-08-17                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: SpaceShuttle | STATUS: COMPLETED | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
+@_______________________________________________________________________________
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
+@_______________________________________________________________________________
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
 
 
@@ -1278,16 +320,35 @@ No missions have been created so far
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @                                                                              @
-@ Earth time: 2021-05-09                                                       @
+@ Earth time: 2021-08-27                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ NAME: SpaceShuttle | STATUS: COMPLETED | SPACESHIP: Challenger
+@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
+@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
+@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
+@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ 
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
+@_______________________________________________________________________________
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
+@ 
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
+@_______________________________________________________________________________
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
+@_______________________________________________________________________________
 @ NAME: Helios | STATUS: PLANNED | SPACESHIP: Challenger
 @ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
 @ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
 @ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
 @ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
 @ 
-@ START: Uranus | FINISH: Kamino | START DATE: 2021-05-15 | END DATE: 2021-06-17
+@ START: Endor | FINISH: Yavin 4 | START DATE: 2021-09-06 | END DATE: 2021-10-22
 @_______________________________________________________________________________
 
 
@@ -1296,341 +357,38 @@ No missions have been created so far
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @                                                                              @
-@ Earth time: 2021-05-19                                                       @
+@ Earth time: 2021-09-06                                                       @
 @                                                                              @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
+@ NAME: SpaceShuttle | STATUS: COMPLETED | SPACESHIP: Challenger
 @ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
 @ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
 @ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
 @ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
 @ 
-@ START: Uranus | FINISH: Kamino | START DATE: 2021-05-15 | END DATE: 2021-06-17
+@ START: Dagobah | FINISH: Lehon | START DATE: 2021-05-22 | END DATE: 2021-08-01
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
+@ NAME: Pioneer | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
+@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
+@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
+@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
+@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
 @ 
-@ START: Uranus | FINISH: Kamino | START DATE: 2021-05-15 | END DATE: 2021-06-17
+@ START: Jupiter | FINISH: Ceres | START DATE: 2021-05-22 | END DATE: 2021-10-18
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: Voyager | STATUS: FAILED
+@ START: Earth | FINISH: Jupiter | START DATE: 2021-05-23 | END DATE: 2021-06-10
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @ NAME: Helios | STATUS: PLANNED | SPACESHIP: Challenger
 @ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
 @ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
 @ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
 @ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
 @ 
-@ START: Tatooine | FINISH: Kashyyyk | START DATE: 2021-05-22 | END DATE: 2021-11-14
+@ START: Endor | FINISH: Yavin 4 | START DATE: 2021-09-06 | END DATE: 2021-10-22
 @_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: PLANNED | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Tatooine | FINISH: Kashyyyk | START DATE: 2021-05-22 | END DATE: 2021-11-14
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Tatooine | FINISH: Kashyyyk | START DATE: 2021-05-22 | END DATE: 2021-11-14
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Tatooine | FINISH: Kashyyyk | START DATE: 2021-05-22 | END DATE: 2021-11-14
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: PLANNED | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Leviathan | FINISH: Kashyyyk | START DATE: 2021-05-21 | END DATE: 2021-08-27
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: PLANNED | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Leviathan | FINISH: Kashyyyk | START DATE: 2021-05-21 | END DATE: 2021-08-27
-@_______________________________________________________________________________
-@ NAME: Moon | STATUS: PLANNED | SPACESHIP: Intelligence
-@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
-@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
-@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
-@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
-@ 
-@ START: Pluto | FINISH: Endar Spire | START DATE: 2021-05-22 | END DATE: 2021-12-01
-@_______________________________________________________________________________
-@ NAME: fuck | STATUS: FAILED
-@ START: Dantooine | FINISH: Naboo | START DATE: 2021-05-24 | END DATE: 2021-06-12
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Leviathan | FINISH: Kashyyyk | START DATE: 2021-05-21 | END DATE: 2021-08-27
-@_______________________________________________________________________________
-@ NAME: Moon | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
-@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
-@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
-@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
-@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
-@ 
-@ START: Pluto | FINISH: Endar Spire | START DATE: 2021-05-22 | END DATE: 2021-12-01
-@_______________________________________________________________________________
-@ NAME: fuck | STATUS: FAILED
-@ START: Dantooine | FINISH: Naboo | START DATE: 2021-05-24 | END DATE: 2021-06-12
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-08                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Leviathan | FINISH: Kashyyyk | START DATE: 2021-05-21 | END DATE: 2021-08-27
-@_______________________________________________________________________________
-@ NAME: Moon | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
-@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
-@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
-@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
-@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
-@ 
-@ START: Pluto | FINISH: Endar Spire | START DATE: 2021-05-22 | END DATE: 2021-12-01
-@_______________________________________________________________________________
-@ NAME: fuck | STATUS: FAILED
-@ START: Dantooine | FINISH: Naboo | START DATE: 2021-05-24 | END DATE: 2021-06-12
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-18                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Leviathan | FINISH: Kashyyyk | START DATE: 2021-05-21 | END DATE: 2021-08-27
-@_______________________________________________________________________________
-@ NAME: Moon | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
-@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
-@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
-@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
-@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
-@ 
-@ START: Pluto | FINISH: Endar Spire | START DATE: 2021-05-22 | END DATE: 2021-12-01
-@_______________________________________________________________________________
-@ NAME: fuck | STATUS: FAILED
-@ START: Dantooine | FINISH: Naboo | START DATE: 2021-05-24 | END DATE: 2021-06-12
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-06-28                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@ NAME: Helios | STATUS: IN_PROGRESS | SPACESHIP: Challenger
-@ CREW: Petra Potter,Hafsa Harding,Reya Handley,Davey Bentley,Sara Barnes,
-@ Adele Mckeown,Zoe Day,Isabelle Person,Azra Hastings,Aronas Paul,
-@ Alanah Stanton,Frazer Carr,Marta Hendrix,Kayleigh Sellers,Cerys Mcdonnell,
-@ Talia Mcnamara,Kaja Rogers,Annabella Lambert,Asiyah Haines,Neave Mustafa,
-@ 
-@ START: Leviathan | FINISH: Kashyyyk | START DATE: 2021-05-21 | END DATE: 2021-08-27
-@_______________________________________________________________________________
-@ NAME: Moon | STATUS: IN_PROGRESS | SPACESHIP: Intelligence
-@ CREW: Bilaal Reid,Ariel Crowther,Malachi Cardenas,Kaden Mccormick,Darien Blanchard,
-@ Cobie Coles,Melisa Villalobos,Kiran Burns,Beatrix Mcdonald,Karan Avalos,
-@ Stefania Redmond,Jozef Braun,Alfie Sosa,Elisabeth Gross,Ed Thatcher,
-@ Nyle Sanders,Nusaybah Buck,Haleema Wills,Om Currie,Harlee Mata,
-@ 
-@ START: Pluto | FINISH: Endar Spire | START DATE: 2021-05-22 | END DATE: 2021-12-01
-@_______________________________________________________________________________
-@ NAME: fuck | STATUS: FAILED
-@ START: Dantooine | FINISH: Naboo | START DATE: 2021-05-24 | END DATE: 2021-06-12
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-09                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-05-19                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
-@_______________________________________________________________________________
-
-
-
-
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@                                                                              @
-@ Earth time: 2021-04-29                                                       @
-@                                                                              @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-No missions have been created so far
+@ NAME: Pioneer-2 | STATUS: FAILED
+@ START: Hoth | FINISH: Star Forge | START DATE: 2021-09-04 | END DATE: 2021-12-23
 @_______________________________________________________________________________
 
 

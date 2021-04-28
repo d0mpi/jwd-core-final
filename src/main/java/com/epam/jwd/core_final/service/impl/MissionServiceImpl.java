@@ -32,7 +32,8 @@ public class MissionServiceImpl implements MissionService {
             !flightMission.getMissionResult().equals(MissionResult.FAILED) ) {
                 flightMission.setMissionResult(MissionResult.IN_PROGRESS);
             } else if (localDate.isAfter(flightMission.getEndDate()) &&
-                    !flightMission.getMissionResult().equals(MissionResult.FAILED)) {
+                    !flightMission.getMissionResult().equals(MissionResult.FAILED) &&
+            !flightMission.getMissionResult().equals(MissionResult.COMPLETED)) {
                 flightMission.setMissionResult(MissionResult.COMPLETED);
                 Spaceship spaceship = flightMission.getAssignedSpaceship();
                 spaceship.setIsReadyForNextMission(true);
