@@ -39,6 +39,7 @@ public class ApplicationProperties {
     @Getter
     String timetableFileName;
 
+
     private static class SingletonHolder {
         private static final ApplicationProperties instance = new ApplicationProperties();
     }

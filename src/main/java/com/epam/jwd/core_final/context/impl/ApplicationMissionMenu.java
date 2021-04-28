@@ -6,17 +6,22 @@ import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
 import com.epam.jwd.core_final.domain.*;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.FlightMissionFactory;
-import com.epam.jwd.core_final.util.OutputTemplates;
-import com.epam.jwd.core_final.util.impl.MissionWriteStream;
+import com.epam.jwd.core_final.domain.OutputTemplates;
+import com.epam.jwd.core_final.util.runnableImpl.ConsoleTimetableRunnable;
+import com.epam.jwd.core_final.util.iostreamImpl.MissionsSerializeToFileStream;
 import com.epam.jwd.core_final.service.impl.CrewServiceImpl;
 import com.epam.jwd.core_final.service.impl.MissionServiceImpl;
 import com.epam.jwd.core_final.service.impl.PlanetServiceImpl;
 import com.epam.jwd.core_final.service.impl.SpaceshipServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.stream.Collectors;
 
+@Slf4j
 public class ApplicationMissionMenu implements ApplicationMenu {
     private static class SingletonHolder {
         private static final ApplicationMissionMenu instance = new ApplicationMissionMenu();
@@ -29,30 +34,20 @@ public class ApplicationMissionMenu implements ApplicationMenu {
     private ApplicationMissionMenu() {
     }
 
+    private final ScheduledExecutorService realtimeTimetableToConsole = Executors.newSingleThreadScheduledExecutor();
+    private Future<?> scheduledFuture;
+
     @Override
     public void getApplicationContext() {
         clearConsole();
         printAvailableOptions();
-        readMenuOptionInput();
+        readMenuOptionInput(OutputTemplates.MISSION_MENU.getOptionNum());
     }
 
     @Override
     public void printAvailableOptions() {
-        System.out.println(OutputTemplates.MISSION_MENU.getText());
-    }
 
-    @Override
-    public void readMenuOptionInput() {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            try {
-                System.out.println("Choose menu option (1-5):");
-                handleUserInput(Short.parseShort(scanner.nextLine()));
-                break;
-            } catch (Exception e) {
-                System.out.println("Invalid value was entered. Please try again.");
-            }
-        }
+        System.out.println(OutputTemplates.MISSION_MENU.getText());
     }
 
     @Override
@@ -62,26 +57,44 @@ public class ApplicationMissionMenu implements ApplicationMenu {
                 clearConsole();
                 generateRandomMission();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.MISSION_MENU.getOptionNum());
             case 2:
                 clearConsole();
                 showAllMissions();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.MISSION_MENU.getOptionNum());
             case 3:
                 clearConsole();
                 writeAllFlightMissions();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.MISSION_MENU.getOptionNum());
             case 4:
-                System.out.println("Coming soon...");
-                readMenuOptionInput();
+                clearConsole();
+                startRealtimeTimetableToConsole();
+                waitUserInput();
             case 5:
                 ApplicationMainMenu.getInstance().getApplicationContext();
             default:
                 System.out.println("The option with the entered number does not exist. Please try again.");
-                readMenuOptionInput();
+                readMenuOptionInput((short) 5);
         }
+    }
+
+    private void waitUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+        pauseTimetable();
+        this.getApplicationContext();
+        System.out.println("Enter something to return to mission menu: ");
+    }
+
+    private void startRealtimeTimetableToConsole() {
+        scheduledFuture = realtimeTimetableToConsole.scheduleAtFixedRate(ConsoleTimetableRunnable.getInstance(), 0,
+                ApplicationProperties.getInstance().getFileRefreshRate(), TimeUnit.SECONDS);
+    }
+
+    private void pauseTimetable() {
+        scheduledFuture.cancel(true);
     }
 
     private void generateRandomMission() {
@@ -101,78 +114,72 @@ public class ApplicationMissionMenu implements ApplicationMenu {
         Spaceship spaceship = SpaceshipServiceImpl.getInstance().findSpaceshipByCriteria(
                 SpaceshipCriteria.builder().isReadyForNextMission(true).minFlightDistance(distance).build()).orElse(null);
 
-        FlightMission flightMission = FlightMissionFactory.getInstance().create(
-                name, LocalDate.now(), LocalDate.now(), distance, planetFrom, planetTo);
+        Random random = new Random();
+        LocalDate date = NassaContext.getInstance().getCurrentDate();
+        FlightMission flightMission;
+        while (true) {
+            try {
+                flightMission = FlightMissionFactory.getInstance().create(
+                        name, date.plusDays(random.nextInt(20)), date.plusDays(random.nextInt(200) + 21), distance, planetFrom, planetTo);
+                break;
+            } catch (DuplicateEntityNameException e) {
+                log.error("Trying to create duplicate mission");
+                System.out.println("Mission with this name already exists. Please enter name again");
+                name = scanner.nextLine();
+            }
+        }
 
         //fail mission no spaceship
         if (spaceship == null) {
             System.out.println("There is no spaceship suitable for the mission");
+            log.error("Mission was not create");
             flightMission.setMissionResult(MissionResult.FAILED);
-            try {
-                MissionServiceImpl.getInstance().updateFlightMissionDetails(flightMission);
-            } catch (DuplicateEntityNameException e) {
-                System.out.println("Duplicate mission");
-            }
+            MissionServiceImpl.getInstance().updateFlightMissionDetails(flightMission);
             return;
         }
+
         ArrayList<CrewMember> crewMembers = findRightCrewMembers(spaceship);
         if (crewMembers == null) {
             System.out.println("There is no crew members suitable for the mission");
+            log.error("Mission was not create");
             flightMission.setMissionResult(MissionResult.FAILED);
-            try {
-                MissionServiceImpl.getInstance().updateFlightMissionDetails(flightMission);
-            } catch (DuplicateEntityNameException e) {
-                System.out.println("Duplicate mission");
-            }
+            MissionServiceImpl.getInstance().updateFlightMissionDetails(flightMission);
             return;
         }
 
         spaceship.setIsReadyForNextMission(false);
-        try {
-            SpaceshipServiceImpl.getInstance().updateSpaceshipDetails(spaceship);
-        } catch (DuplicateEntityNameException e) {
-            System.out.println("Duplicate spaceship");
-        }
+        SpaceshipServiceImpl.getInstance().updateSpaceshipDetails(spaceship);
         flightMission.setAssignedSpaceship(spaceship);
-        for(CrewMember crewMember : crewMembers) {
-            try {
-                crewMember.setIsReadyForNextMission(false);
-                CrewServiceImpl.getInstance().updateCrewMemberDetails(crewMember);
-            } catch (DuplicateEntityNameException e) {
-                System.out.println("Duplicate crew member");
-            }
+        for (CrewMember crewMember : crewMembers) {
+            crewMember.setIsReadyForNextMission(false);
+            CrewServiceImpl.getInstance().updateCrewMemberDetails(crewMember);
         }
         flightMission.setAssignedCrew(crewMembers);
-        try {
-            MissionServiceImpl.getInstance().updateFlightMissionDetails(flightMission);
-        } catch (DuplicateEntityNameException e) {
-            System.out.println("Duplicate mission");
-        }
+        MissionServiceImpl.getInstance().updateFlightMissionDetails(flightMission);
 
         clearConsole();
         System.out.println(flightMission + " was created successfully\n");
+        log.info("Mission was generated successfully");
     }
 
     private ArrayList<CrewMember> findRightCrewMembers(Spaceship spaceship) {
-        ArrayList<CrewMember> crewMembers = new ArrayList<>();
+        ArrayList<CrewMember> resultCrew = new ArrayList<>();
         for (Map.Entry<Role, Short> entry : spaceship.getCrew().entrySet()) {
-            short numOfRoles = entry.getValue();
-            while (numOfRoles-- > 0) {
-                CrewMember crewMember = CrewServiceImpl.getInstance().findCrewMemberByCriteria(CrewMemberCriteria.builder().
-                        role(entry.getKey()).isReadyForNextMission(true).build()).orElse(null);
-                if (crewMember == null) {
-                    return null;
-                }
-                crewMembers.add(crewMember);
+            ArrayList<CrewMember> rightCrewMember = new ArrayList<>(CrewServiceImpl.getInstance().findAllCrewMembersByCriteria(CrewMemberCriteria.builder().
+                    role(entry.getKey()).isReadyForNextMission(true).build()));
+            if (rightCrewMember.size() < entry.getValue()) {
+                return null;
             }
+            resultCrew.addAll(rightCrewMember.stream().limit(entry.getValue()).collect(Collectors.toList()));
         }
-        return crewMembers;
+        return resultCrew;
     }
 
     private void writeAllFlightMissions() {
         try {
-            MissionWriteStream.getInstance().writeMissionsResult(MissionServiceImpl.getInstance().findAllMissions());
+            MissionsSerializeToFileStream.getInstance().writeMissionsResult(MissionServiceImpl.getInstance().findAllMissions());
         } catch (IOException e) {
+            log.error("Error during writing to file");
             System.out.println("Error during writing to file");
         }
     }

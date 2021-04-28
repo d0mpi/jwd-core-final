@@ -5,11 +5,13 @@ import com.epam.jwd.core_final.domain.Planet;
 import com.epam.jwd.core_final.domain.Point;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.PlanetFactory;
-import com.epam.jwd.core_final.util.OutputTemplates;
 import com.epam.jwd.core_final.service.impl.PlanetServiceImpl;
+import com.epam.jwd.core_final.domain.OutputTemplates;
+import com.epam.jwd.core_final.util.iostreamImpl.PlanetReadFileStream;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Scanner;
 
 @Slf4j
@@ -29,24 +31,12 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
     public void getApplicationContext() {
         clearConsole();
         printAvailableOptions();
-        readMenuOptionInput();
+        readMenuOptionInput((short) 4);
     }
 
     @Override
     public void printAvailableOptions() {
         System.out.println(OutputTemplates.PLANET_MENU.getText());
-    }
-
-    @Override
-    public void readMenuOptionInput() {
-        System.out.println("Choose menu option (1-4):");
-        Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextShort()) {
-            handleUserInput(scanner.nextShort());
-        } else {
-            System.out.println("Invalid value was entered. Please try again.");
-            readMenuOptionInput();
-        }
     }
 
     @Override
@@ -56,22 +46,22 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
                 clearConsole();
                 createPlanet();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput((short) 4);
             case 2:
                 clearConsole();
                 generatePlanet();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput((short) 4);
             case 3:
                 clearConsole();
                 showAllPlanets();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput((short) 4);
             case 4:
                 ApplicationMainMenu.getInstance().getApplicationContext();
             default:
                 System.out.println("The option with the entered number does not exist. Please try again.");
-                readMenuOptionInput();
+                readMenuOptionInput((short) 4);
         }
     }
 
@@ -84,32 +74,30 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
     }
 
     private void generatePlanet() {
-
-    }
-
-    private int readCoordinateX() {
         Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("Enter X planet coordinate:");
-            if (scanner.hasNextInt()) {
-                return scanner.nextInt();
-            } else {
-                System.out.println("Invalid value was entered. Please try again.");
+        Random random = new Random();
+        System.out.println("Generating new planet...");
+        System.out.println("Enter unique planet name:");
+        String name = scanner.nextLine();
+
+        Planet planet;
+        while (true) {
+            try {
+                planet = PlanetFactory.getInstance().create(name,
+                        new Point(PlanetServiceImpl.getInstance().generateRandomCoordinate(),
+                                PlanetServiceImpl.getInstance().generateRandomCoordinate()));
+                break;
+            } catch (DuplicateEntityNameException e) {
+                log.error("Trying to create duplicate planet");
+                System.out.println("Planet with this name already exists. Please enter name again:");
+                name = scanner.nextLine();
             }
-        } while (true);
+        }
+        clearConsole();
+        System.out.println(planet.toString() + " was created successfully\n");
+        log.info("Planet was generated successfully");
     }
 
-    private int readCoordinateY() {
-        Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("Enter Y planet coordinate:");
-            if (scanner.hasNextInt()) {
-                return scanner.nextInt();
-            } else {
-                System.out.println("Invalid value was entered. Please try again.");
-            }
-        } while (true);
-    }
 
     private void createPlanet() {
         Scanner scanner = new Scanner(System.in);
@@ -117,21 +105,22 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
         System.out.println("Creating new planet...");
         System.out.println("Enter unique planet name:");
         String name = scanner.nextLine();
-        int xCoordinate = readCoordinateX(), yCoordinate = readCoordinateY();
 
         Planet planet;
         while (true) {
             try {
-                planet = PlanetFactory.getInstance().create(name, new Point(xCoordinate, yCoordinate));
+                planet = PlanetFactory.getInstance().create(name,
+                        new Point(PlanetReadFileStream.getInstance().readCoordinate('X'),
+                                PlanetReadFileStream.getInstance().readCoordinate('Y')));
                 break;
             } catch (DuplicateEntityNameException e) {
-                log.info("Attempt to create duplicate planet");
+                log.error("Attempt to generate duplicate planet");
                 System.out.println("Planet with this name already exists. Please enter name again:");
                 name = scanner.nextLine();
             }
         }
         clearConsole();
         System.out.println(planet.toString() + " was created successfully\n");
-
+        log.info("Planet was created successfully");
     }
 }

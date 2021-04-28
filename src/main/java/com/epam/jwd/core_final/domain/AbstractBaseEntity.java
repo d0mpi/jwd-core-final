@@ -1,7 +1,5 @@
 package com.epam.jwd.core_final.domain;
 
-import lombok.ToString;
-
 /**
  * Expected fields:
  * <p>

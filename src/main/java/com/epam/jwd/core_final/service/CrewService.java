@@ -20,12 +20,12 @@ public interface CrewService {
 
     Optional<CrewMember> findCrewMemberByCriteria(Criteria<? extends CrewMember> criteria);
 
-    CrewMember updateCrewMemberDetails(CrewMember crewMember) throws DuplicateEntityNameException;
+    void updateCrewMemberDetails(CrewMember crewMember) throws DuplicateEntityNameException;
 
     // todo create custom exception for case, when crewMember is not able to be assigned
     void assignCrewMemberOnMission(CrewMember crewMember) throws NotReadyEntityException;
 
     // todo create custom exception for case, when crewMember is not able to be created (for example - duplicate.
     // crewmember unique criteria - only name!
-    CrewMember createCrewMember(CrewMember crewMember) throws DuplicateEntityNameException;
+    void createCrewMember(CrewMember crewMember) throws DuplicateEntityNameException;
 }

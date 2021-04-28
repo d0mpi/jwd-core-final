@@ -3,13 +3,17 @@ package com.epam.jwd.core_final.criteria;
 import com.epam.jwd.core_final.domain.CrewMember;
 import com.epam.jwd.core_final.domain.Rank;
 import com.epam.jwd.core_final.domain.Role;
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Should be a builder for {@link com.epam.jwd.core_final.domain.CrewMember} fields
  */
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
+@Slf4j
 public class CrewMemberCriteria extends Criteria<CrewMember> {
     @Getter
     private final Role role;

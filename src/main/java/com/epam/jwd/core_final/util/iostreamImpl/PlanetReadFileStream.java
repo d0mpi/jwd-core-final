@@ -1,43 +1,39 @@
-package com.epam.jwd.core_final.util.impl;
+package com.epam.jwd.core_final.util.iostreamImpl;
 
 import com.epam.jwd.core_final.domain.ApplicationProperties;
-import com.epam.jwd.core_final.domain.Planet;
 import com.epam.jwd.core_final.domain.Point;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.PlanetFactory;
 import com.epam.jwd.core_final.util.ReadStream;
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Slf4j
-public enum PlanetReadStream implements ReadStream {
-    INSTANCE;
+public class PlanetReadFileStream implements ReadStream {
+    private static class SingletonHolder {
+        private static final PlanetReadFileStream instance = new PlanetReadFileStream();
+    }
+
+    public static PlanetReadFileStream getInstance() {
+        return PlanetReadFileStream.SingletonHolder.instance;
+    }
+
+    private PlanetReadFileStream() {
+    }
 
     @Override
     public void readData() {
-        List<Planet> planets = new ArrayList<>();
-        char fileSeparator = File.separatorChar;
-        String inputDirectory = "src" + fileSeparator +
-                "main" + fileSeparator +
-                "resources" + fileSeparator +
-                ApplicationProperties.getInstance().getInputRootDir() + fileSeparator;
-        Path path = Paths.get(inputDirectory + ApplicationProperties.getInstance().getSpaceMapFileName());
+        Path path = Paths.get(buildFilePath(ApplicationProperties.getInstance().getSpaceMapFileName()));
         Scanner scanner;
-        StringBuilder line = new StringBuilder("");
         int yCoordinate = 0, xCoordinate = 0;
-
         Pattern pattern = Pattern.compile("(?<planetName>[^,]+),");
         Matcher matcher;
-
         try {
             scanner = new Scanner(path);
             while (scanner.hasNextLine()) {
@@ -50,6 +46,7 @@ public enum PlanetReadStream implements ReadStream {
                             if (!planetName.equals("null")) {
                                 PlanetFactory.getInstance().create(planetName,
                                         new Point(xCoordinate, yCoordinate));
+                                log.info("Planet " + matcher.group("planetName") + " was read from file");
                             }
                             xCoordinate++;
                         } catch (DuplicateEntityNameException e) {
@@ -63,7 +60,21 @@ public enum PlanetReadStream implements ReadStream {
             }
         } catch (
                 IOException e) {
+            log.info("Error during reading planet from file");
             e.printStackTrace();
         }
     }
+
+    public int readCoordinate(char name) {
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.println("Enter " + name + " planet coordinate:");
+            if (scanner.hasNextInt()) {
+                return scanner.nextInt();
+            } else {
+                System.out.println("Invalid value was entered. Please try again.");
+            }
+        } while (true);
+    }
+
 }

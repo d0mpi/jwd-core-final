@@ -1,7 +1,8 @@
 package com.epam.jwd.core_final.criteria;
 
 import com.epam.jwd.core_final.domain.BaseEntity;
-import lombok.*;
+import lombok.Getter;
+import lombok.ToString;
 
 /**
  * Should be a builder for {@link BaseEntity} fields

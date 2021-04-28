@@ -3,8 +3,6 @@ package com.epam.jwd.core_final.domain;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Random;
-
 /**
  * Expected fields:
  * <p>

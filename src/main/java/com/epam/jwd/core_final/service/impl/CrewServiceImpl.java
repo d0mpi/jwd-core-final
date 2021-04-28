@@ -3,17 +3,19 @@ package com.epam.jwd.core_final.service.impl;
 import com.epam.jwd.core_final.context.impl.NassaContext;
 import com.epam.jwd.core_final.criteria.CrewMemberCriteria;
 import com.epam.jwd.core_final.criteria.Criteria;
-import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
 import com.epam.jwd.core_final.domain.CrewMember;
-import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.exception.NotReadyEntityException;
 import com.epam.jwd.core_final.service.CrewService;
+import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Slf4j
 public class CrewServiceImpl implements CrewService {
     private final Collection<CrewMember> crewMembers = NassaContext.getInstance().retrieveBaseEntityList(CrewMember.class);
 
@@ -44,17 +46,19 @@ public class CrewServiceImpl implements CrewService {
     }
 
     @Override
-    public CrewMember updateCrewMemberDetails(CrewMember crewMember) throws DuplicateEntityNameException {
+    public void updateCrewMemberDetails(CrewMember crewMember) {
         CrewMember crewMemberFromCollection = findCrewMemberByCriteria(CrewMemberCriteria.builder()
                 .name(crewMember.getName()).build()).orElse(null);
         if (crewMemberFromCollection == null) {
-            createCrewMember(crewMember);
+            try {
+                createCrewMember(crewMember);
+            } catch (DuplicateEntityNameException ignored) {
+            }
         } else {
             crewMemberFromCollection.setRank(crewMember.getRank());
             crewMemberFromCollection.setRole(crewMember.getRole());
             crewMemberFromCollection.setIsReadyForNextMission(crewMember.getIsReadyForNextMission());
         }
-        return crewMember;
     }
 
     @Override
@@ -69,7 +73,7 @@ public class CrewServiceImpl implements CrewService {
     }
 
     @Override
-    public CrewMember createCrewMember(CrewMember crewMember) throws DuplicateEntityNameException {
+    public void createCrewMember(CrewMember crewMember) throws DuplicateEntityNameException {
         CrewMember duplicateCrewMember = crewMembers.stream().
                 filter(member -> member.getName().equalsIgnoreCase(crewMember.getName())).findFirst().orElse(null);
         if(duplicateCrewMember != null){
@@ -77,7 +81,7 @@ public class CrewServiceImpl implements CrewService {
         } else {
             crewMembers.add(crewMember);
         }
-        return crewMember;
+        log.info("New crew member was added to collection");
     }
 
     private Stream<CrewMember> buildFilter(CrewMemberCriteria crewMemberCriteria) {

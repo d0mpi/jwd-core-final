@@ -20,12 +20,12 @@ public interface SpaceshipService {
 
     Optional<Spaceship> findSpaceshipByCriteria(Criteria<? extends Spaceship> criteria);
 
-    Spaceship updateSpaceshipDetails(Spaceship spaceship) throws DuplicateEntityNameException;
+    void updateSpaceshipDetails(Spaceship spaceship) throws DuplicateEntityNameException;
 
     // todo create custom exception for case, when spaceship is not able to be assigned
     void assignSpaceshipOnMission(Spaceship crewMember) throws NotReadyEntityException;
 
     // todo create custom exception for case, when crewMember is not able to be created (for example - duplicate.
     // spaceship unique criteria - only name!
-    Spaceship createSpaceship(Spaceship spaceship) throws DuplicateEntityNameException;
+    void createSpaceship(Spaceship spaceship) throws DuplicateEntityNameException;
 }

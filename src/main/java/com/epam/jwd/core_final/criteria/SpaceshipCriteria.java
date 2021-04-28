@@ -3,12 +3,14 @@ package com.epam.jwd.core_final.criteria;
 import com.epam.jwd.core_final.domain.Role;
 import com.epam.jwd.core_final.domain.Spaceship;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
 
 /**
  * Should be a builder for {@link Spaceship} fields
  */
+@Slf4j
 public class SpaceshipCriteria extends Criteria<Spaceship> {
     @Getter
     private final Map<Role, Short> crew;

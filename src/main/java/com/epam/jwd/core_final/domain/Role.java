@@ -1,7 +1,6 @@
 package com.epam.jwd.core_final.domain;
 
 import com.epam.jwd.core_final.exception.UnknownEntityException;
-import lombok.EqualsAndHashCode;
 
 import java.util.Arrays;
 import java.util.Optional;

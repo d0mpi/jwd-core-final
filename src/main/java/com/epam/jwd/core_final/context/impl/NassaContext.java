@@ -1,13 +1,20 @@
 package com.epam.jwd.core_final.context.impl;
 
 import com.epam.jwd.core_final.context.ApplicationContext;
-import com.epam.jwd.core_final.domain.*;
+import com.epam.jwd.core_final.domain.BaseEntity;
+import com.epam.jwd.core_final.domain.CrewMember;
+import com.epam.jwd.core_final.domain.FlightMission;
+import com.epam.jwd.core_final.domain.Planet;
+import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.InvalidStateException;
-import com.epam.jwd.core_final.util.impl.CrewReadStream;
-import com.epam.jwd.core_final.util.impl.PlanetReadStream;
-import com.epam.jwd.core_final.util.impl.SpaceshipReadStream;
+import com.epam.jwd.core_final.util.iostreamImpl.CrewReadFileStream;
+import com.epam.jwd.core_final.util.iostreamImpl.PlanetReadFileStream;
+import com.epam.jwd.core_final.util.iostreamImpl.SpaceshipReadFileStream;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -20,6 +27,8 @@ public class NassaContext implements ApplicationContext {
     private final Collection<Spaceship> spaceships = new ArrayList<>();
     private final ArrayList<Planet> planetMap = new ArrayList<>();
     private final Collection<FlightMission> flightMissions = new ArrayList<>();
+    @Setter @Getter
+    private LocalDate currentDate;
 
     private static class SingletonHolder {
         private static final NassaContext instance = new NassaContext();
@@ -51,13 +60,13 @@ public class NassaContext implements ApplicationContext {
     /**
      * You have to read input files, populate collections
      *
-     * @throws InvalidStateException
      */
     @Override
-    public void init() throws InvalidStateException {
-        CrewReadStream.INSTANCE.readData();
-        SpaceshipReadStream.INSTANCE.readData();
-        PlanetReadStream.INSTANCE.readData();
+    public void init() {
+        CrewReadFileStream.getInstance().readData();
+        SpaceshipReadFileStream.getInstance().readData();
+        PlanetReadFileStream.getInstance().readData();
+        setCurrentDate(LocalDate.now());
         log.info("Data has been reading successfully");
     }
 }

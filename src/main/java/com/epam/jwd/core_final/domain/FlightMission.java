@@ -3,10 +3,8 @@ package com.epam.jwd.core_final.domain;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,21 +23,29 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 public class FlightMission extends AbstractBaseEntity {
-    @Getter @Setter
+    @Getter
+    @Setter
     private LocalDate startDate;
-    @Getter @Setter
+    @Getter
+    @Setter
     private LocalDate endDate;
-    @Getter @Setter
+    @Getter
+    @Setter
     private Long distance;
-    @Getter @Setter
-    private Spaceship assignedSpaceship;
-    @Getter @Setter
-    private List<CrewMember> assignedCrew;
-    @Getter @Setter
+    @Getter
+    @Setter
+    private Spaceship assignedSpaceship = null;
+    @Getter
+    @Setter
+    private List<CrewMember> assignedCrew = null;
+    @Getter
+    @Setter
     private MissionResult missionResult;
-    @Getter @Setter
+    @Getter
+    @Setter
     private Planet from;
-    @Getter @Setter
+    @Getter
+    @Setter
     private Planet to;
 
     public FlightMission(String name,
@@ -56,16 +62,19 @@ public class FlightMission extends AbstractBaseEntity {
 
     @Override
     public String toString() {
-        return "FlightMission " + getName() + " id=" + getId() +
+        String text = "FlightMission " + getName() + " id=" + getId() +
                 "\nstartDate=" + startDate +
                 ", endDate=" + endDate +
-                ", distance=" + distance +
-                ", assignedSpaceship=" + assignedSpaceship +
-                "\nAssignedCrew= {"
-                + assignedCrew.toString() +
-                "\nMissionResult=" + missionResult +
+                ", distance=" + distance;
+        if (!missionResult.equals(MissionResult.FAILED) && assignedSpaceship!=null && assignedCrew != null) {
+            text += ", assignedSpaceship=" + assignedSpaceship +
+                    "\nAssignedCrew= {"
+                    + assignedCrew;
+        }
+        text += "\nMissionResult=" + missionResult +
                 ", from " + from +
                 ", to " + to +
                 '}';
+        return text;
     }
 }

@@ -1,24 +1,21 @@
 package com.epam.jwd.core_final.service.impl;
 
 import com.epam.jwd.core_final.context.impl.NassaContext;
-import com.epam.jwd.core_final.criteria.CrewMemberCriteria;
 import com.epam.jwd.core_final.criteria.Criteria;
-import com.epam.jwd.core_final.criteria.FlightMissionCriteria;
 import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
-import com.epam.jwd.core_final.domain.CrewMember;
-import com.epam.jwd.core_final.domain.FlightMission;
 import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.exception.NotReadyEntityException;
 import com.epam.jwd.core_final.service.SpaceshipService;
+import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Slf4j
 public class SpaceshipServiceImpl implements SpaceshipService {
 
     private final Collection<Spaceship> spaceships = NassaContext.getInstance().retrieveBaseEntityList(Spaceship.class);
@@ -50,17 +47,18 @@ public class SpaceshipServiceImpl implements SpaceshipService {
     }
 
     @Override
-    public Spaceship updateSpaceshipDetails(Spaceship spaceship) throws DuplicateEntityNameException {
+    public void updateSpaceshipDetails(Spaceship spaceship) {
         Spaceship spaceshipFromCollection = findSpaceshipByCriteria(SpaceshipCriteria.builder()
                 .name(spaceship.getName()).build()).orElse(null);
         if (spaceshipFromCollection == null) {
-            createSpaceship(spaceship);
+            try {
+                createSpaceship(spaceship);
+            } catch (DuplicateEntityNameException ignored) {}
         } else {
             spaceshipFromCollection.setCrew(spaceship.getCrew());
             spaceshipFromCollection.setFlightDistance(spaceship.getFlightDistance());
             spaceshipFromCollection.setIsReadyForNextMission(spaceship.getIsReadyForNextMission());
         }
-        return spaceship;
     }
 
     @Override
@@ -75,15 +73,15 @@ public class SpaceshipServiceImpl implements SpaceshipService {
     }
 
     @Override
-    public Spaceship createSpaceship(Spaceship spaceship) throws DuplicateEntityNameException {
+    public void createSpaceship(Spaceship spaceship) throws DuplicateEntityNameException {
         Spaceship duplicateSpaceship = spaceships.stream().
                 filter(ship -> ship.getName().equalsIgnoreCase(spaceship.getName())).findFirst().orElse(null);
         if(duplicateSpaceship != null){
             throw new DuplicateEntityNameException(spaceship.getName());
         } else {
             spaceships.add(spaceship);
-            return spaceship;
         }
+        log.info("New spaceship was added to collection");
     }
 
     private Stream<Spaceship> buildFilter(SpaceshipCriteria spaceshipCriteria) {

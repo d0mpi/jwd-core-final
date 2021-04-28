@@ -2,26 +2,23 @@ package com.epam.jwd.core_final.util;
 
 import com.epam.jwd.core_final.domain.ApplicationProperties;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
+@Slf4j
 public final class PropertyReaderUtil {
 
     @Getter
     private static final Properties properties = new Properties();
 
     private PropertyReaderUtil(){}
-    static {
-        try {
-            loadProperties();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 
+    static {
+            loadProperties();
+    }
 
     /**
      * try-with-resource using FileInputStream
@@ -31,7 +28,7 @@ public final class PropertyReaderUtil {
      * as a result - you should populate {@link ApplicationProperties} with corresponding
      * values from property file
      */
-    private static void loadProperties() throws FileNotFoundException {
+    private static void loadProperties(){
         final String propertiesFileName = "src/main/resources/application.properties";
 
         FileInputStream fileInputStream;
@@ -39,8 +36,10 @@ public final class PropertyReaderUtil {
             fileInputStream = new FileInputStream(propertiesFileName);
             properties.load(fileInputStream);
             fileInputStream.close();
+            log.info("Properties have been reading successfully");
         } catch (IOException e) {
             e.printStackTrace();
+            log.error("Properties have not been reading");
         }
     }
 }

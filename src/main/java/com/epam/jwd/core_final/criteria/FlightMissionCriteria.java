@@ -1,7 +1,10 @@
 package com.epam.jwd.core_final.criteria;
 
 import com.epam.jwd.core_final.domain.*;
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,6 +14,7 @@ import java.util.List;
  */
 @EqualsAndHashCode(callSuper = true)
 @ToString
+@Slf4j
 public class FlightMissionCriteria extends Criteria<FlightMission> {
     @Getter
     private final LocalDate startDate;

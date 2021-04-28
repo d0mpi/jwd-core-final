@@ -2,15 +2,19 @@ package com.epam.jwd.core_final.context.impl;
 
 import com.epam.jwd.core_final.context.ApplicationMenu;
 import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
+import com.epam.jwd.core_final.domain.OutputTemplates;
 import com.epam.jwd.core_final.domain.Role;
 import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.SpaceshipFactory;
-import com.epam.jwd.core_final.util.OutputTemplates;
 import com.epam.jwd.core_final.service.impl.SpaceshipServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
 
 @Slf4j
 public class ApplicationSpaceshipMenu implements ApplicationMenu {
@@ -29,26 +33,12 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
     public void getApplicationContext() {
         clearConsole();
         printAvailableOptions();
-        readMenuOptionInput();
+        readMenuOptionInput(OutputTemplates.SPACESHIP_MENU.getOptionNum());
     }
 
     @Override
     public void printAvailableOptions() {
         System.out.println(OutputTemplates.SPACESHIP_MENU.getText());
-    }
-
-    @Override
-    public void readMenuOptionInput() {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            try {
-                System.out.println("Choose menu option (1-5):");
-                handleUserInput(Short.parseShort(scanner.nextLine()));
-                break;
-            } catch (Exception e) {
-                System.out.println("Invalid value was entered. Please try again.");
-            }
-        }
     }
 
     @Override
@@ -58,27 +48,27 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
                 clearConsole();
                 createSpaceshipByUser();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.SPACESHIP_MENU.getOptionNum());
             case 2:
                 clearConsole();
                 generateRandomSpaceship();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.SPACESHIP_MENU.getOptionNum());
             case 3:
                 clearConsole();
                 showAllSpaceships();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.SPACESHIP_MENU.getOptionNum());
             case 4:
                 clearConsole();
                 showAvailableSpaceships();
                 printAvailableOptions();
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.SPACESHIP_MENU.getOptionNum());
             case 5:
                 ApplicationMainMenu.getInstance().getApplicationContext();
             default:
                 System.out.println("The option with the entered number does not exist. Please try again.");
-                readMenuOptionInput();
+                readMenuOptionInput(OutputTemplates.SPACESHIP_MENU.getOptionNum());
         }
     }
 
@@ -108,19 +98,20 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
         Long flightDistance = readFlightDistance();
         Map<Role, Short> crewMap = readCrewMap();
 
-        Spaceship spaceship = null;
+        Spaceship spaceship;
         while(true) {
             try {
                 spaceship = SpaceshipFactory.getInstance().create(name, crewMap, flightDistance);
                 break;
             } catch (DuplicateEntityNameException e) {
-                log.info("Create duplicate spaceship");
+                log.error("Trying to create duplicate spaceship");
                 System.out.println("Spaceship with this name already exists. Please enter name again:");
                 name = scanner.nextLine();
             }
         }
         clearConsole();
         System.out.println(spaceship.toString() + " was created successfully\n");
+        log.info("Spaceship was created successfully");
     }
 
     public long readFlightDistance() {
@@ -170,18 +161,19 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
             crewMap.put(Role.COMMANDER, (short) 1);
         }
 
-        Spaceship spaceship = null;
+        Spaceship spaceship;
         while (true) {
             try {
                 spaceship = SpaceshipFactory.getInstance().create(name, crewMap, flightDistance);
                 break;
             } catch (DuplicateEntityNameException e) {
-                log.info("Generate duplicate spaceship");
+                log.error("Trying to generate duplicate spaceship");
                 System.out.println("Spaceship with this name already exists. Please enter name again:");
                 name = scanner.nextLine();
             }
         }
         clearConsole();
         System.out.println(spaceship.toString() + " was created successfully\n");
+        log.info("Spaceship was generated successfully");
     }
 }
