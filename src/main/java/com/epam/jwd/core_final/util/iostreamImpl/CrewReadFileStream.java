@@ -36,7 +36,7 @@ public class CrewReadFileStream implements ReadStream {
                         matcher.group("rank"));
                 log.info("Crew " + matcher.group("name") + " was read from file");
             } catch (DuplicateEntityNameException e) {
-                log.error("Crew member name " + matcher.group("name")  + " already exists");
+                log.error("Crew member name " + matcher.group("name") + " already exists");
             }
         }
     }

@@ -14,10 +14,11 @@ public final class PropertyReaderUtil {
     @Getter
     private static final Properties properties = new Properties();
 
-    private PropertyReaderUtil(){}
+    private PropertyReaderUtil() {
+    }
 
     static {
-            loadProperties();
+        loadProperties();
     }
 
     /**
@@ -28,11 +29,11 @@ public final class PropertyReaderUtil {
      * as a result - you should populate {@link ApplicationProperties} with corresponding
      * values from property file
      */
-    private static void loadProperties(){
+    private static void loadProperties() {
         final String propertiesFileName = "src/main/resources/application.properties";
 
         FileInputStream fileInputStream;
-        try{
+        try {
             fileInputStream = new FileInputStream(propertiesFileName);
             properties.load(fileInputStream);
             fileInputStream.close();

@@ -53,7 +53,8 @@ public class SpaceshipServiceImpl implements SpaceshipService {
         if (spaceshipFromCollection == null) {
             try {
                 createSpaceship(spaceship);
-            } catch (DuplicateEntityNameException ignored) {}
+            } catch (DuplicateEntityNameException ignored) {
+            }
         } else {
             spaceshipFromCollection.setCrew(spaceship.getCrew());
             spaceshipFromCollection.setFlightDistance(spaceship.getFlightDistance());
@@ -63,7 +64,7 @@ public class SpaceshipServiceImpl implements SpaceshipService {
 
     @Override
     public void assignSpaceshipOnMission(Spaceship spaceship) throws NotReadyEntityException {
-        if(spaceship.getIsReadyForNextMission()) {
+        if (spaceship.getIsReadyForNextMission()) {
             spaceships.stream().
                     filter(spaceship1 -> spaceship.getName().equals(spaceship1.getName())).
                     forEach(spaceship1 -> spaceship1.setIsReadyForNextMission(false));
@@ -76,7 +77,7 @@ public class SpaceshipServiceImpl implements SpaceshipService {
     public void createSpaceship(Spaceship spaceship) throws DuplicateEntityNameException {
         Spaceship duplicateSpaceship = spaceships.stream().
                 filter(ship -> ship.getName().equalsIgnoreCase(spaceship.getName())).findFirst().orElse(null);
-        if(duplicateSpaceship != null){
+        if (duplicateSpaceship != null) {
             throw new DuplicateEntityNameException(spaceship.getName());
         } else {
             spaceships.add(spaceship);

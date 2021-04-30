@@ -6,7 +6,6 @@ import com.epam.jwd.core_final.domain.CrewMember;
 import com.epam.jwd.core_final.domain.FlightMission;
 import com.epam.jwd.core_final.domain.Planet;
 import com.epam.jwd.core_final.domain.Spaceship;
-import com.epam.jwd.core_final.exception.InvalidStateException;
 import com.epam.jwd.core_final.util.iostreamImpl.CrewReadFileStream;
 import com.epam.jwd.core_final.util.iostreamImpl.PlanetReadFileStream;
 import com.epam.jwd.core_final.util.iostreamImpl.SpaceshipReadFileStream;
@@ -15,19 +14,20 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 
 // todo
 @Slf4j
 public class NassaContext implements ApplicationContext {
 
     // no getters/setters for them
-    private final Collection<CrewMember> crewMembers = new ArrayList<>();
-    private final Collection<Spaceship> spaceships = new ArrayList<>();
-    private final ArrayList<Planet> planetMap = new ArrayList<>();
-    private final Collection<FlightMission> flightMissions = new ArrayList<>();
-    @Setter @Getter
+    private final Collection<CrewMember> crewMembers = new LinkedList<>();
+    private final Collection<Spaceship> spaceships = new LinkedList<>();
+    private final Collection<Planet> planetMap = new LinkedList<>();
+    private final Collection<FlightMission> flightMissions = new LinkedList<>();
+    @Setter
+    @Getter
     private LocalDate currentDate;
 
     private static class SingletonHolder {
@@ -44,13 +44,13 @@ public class NassaContext implements ApplicationContext {
     @Override
     @SuppressWarnings("unchecked")
     public <T extends BaseEntity> Collection<T> retrieveBaseEntityList(Class<T> tClass) {
-        if(tClass.getName().equals(CrewMember.class.getName())){
+        if (tClass.getName().equals(CrewMember.class.getName())) {
             return (Collection<T>) crewMembers;
         } else if (tClass.getName().equals(Spaceship.class.getName())) {
             return (Collection<T>) spaceships;
         } else if (tClass.getName().equals(Planet.class.getName())) {
-            return (Collection<T>) planetMap;}
-        else if (tClass.getName().equals(FlightMission.class.getName())) {
+            return (Collection<T>) planetMap;
+        } else if (tClass.getName().equals(FlightMission.class.getName())) {
             return (Collection<T>) flightMissions;
         } else {
             return null;
@@ -59,7 +59,6 @@ public class NassaContext implements ApplicationContext {
 
     /**
      * You have to read input files, populate collections
-     *
      */
     @Override
     public void init() {

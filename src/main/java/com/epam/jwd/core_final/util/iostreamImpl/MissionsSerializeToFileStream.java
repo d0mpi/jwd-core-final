@@ -1,7 +1,7 @@
 package com.epam.jwd.core_final.util.iostreamImpl;
 
+import com.epam.jwd.core_final.domain.AbstractBaseEntity;
 import com.epam.jwd.core_final.domain.ApplicationProperties;
-import com.epam.jwd.core_final.domain.FlightMission;
 import com.epam.jwd.core_final.util.WriteStream;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +24,7 @@ public class MissionsSerializeToFileStream implements WriteStream {
     }
 
     @Override
-    public void writeMissionsResult(List<FlightMission> flightMissions) throws IOException {
+    public <T extends AbstractBaseEntity> void writeData(List<T> flightMissions) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         char fileSeparator = File.separatorChar;
         File file = new File(

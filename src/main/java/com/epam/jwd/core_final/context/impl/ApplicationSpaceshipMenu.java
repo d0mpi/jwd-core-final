@@ -8,6 +8,8 @@ import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.SpaceshipFactory;
 import com.epam.jwd.core_final.service.impl.SpaceshipServiceImpl;
+import com.epam.jwd.core_final.util.iostreamImpl.PlanetReadConsoleStream;
+import com.epam.jwd.core_final.util.iostreamImpl.SpaceshipWriteConsoleStream;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
@@ -73,20 +75,18 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
     }
 
     public void showAllSpaceships() {
-        LinkedList<Spaceship> spaceships = new LinkedList<>(SpaceshipServiceImpl.getInstance().findAllSpaceships());
-        for (Spaceship spaceship : spaceships) {
-            System.out.println(spaceship.toString());
-        }
-        System.out.println();
+        LinkedList<Spaceship> spaceships = (LinkedList<Spaceship>) SpaceshipServiceImpl.getInstance().findAllSpaceships();
+        SpaceshipWriteConsoleStream.getInstance().writeData(spaceships);
     }
 
     public void showAvailableSpaceships() {
         LinkedList<Spaceship> spaceships = new LinkedList<>(SpaceshipServiceImpl.getInstance().
                 findAllSpaceshipsByCriteria(SpaceshipCriteria.builder().isReadyForNextMission(true).build()));
-        for (Spaceship spaceship : spaceships) {
-            System.out.println(spaceship.toString());
+        if (spaceships.size() != 0) {
+            SpaceshipWriteConsoleStream.getInstance().writeData(spaceships);
+        } else {
+            System.out.println("No spaceships are available yet");
         }
-        System.out.println();
     }
 
     public void createSpaceshipByUser() {
@@ -95,11 +95,11 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
         System.out.println("Creating new spaceship...");
         System.out.println("Enter unique name:");
         String name = scanner.nextLine();
-        Long flightDistance = readFlightDistance();
-        Map<Role, Short> crewMap = readCrewMap();
+        Long flightDistance = PlanetReadConsoleStream.getInstance().readFlightDistance();
+        Map<Role, Short> crewMap = PlanetReadConsoleStream.getInstance().readCrewMap();
 
         Spaceship spaceship;
-        while(true) {
+        while (true) {
             try {
                 spaceship = SpaceshipFactory.getInstance().create(name, crewMap, flightDistance);
                 break;
@@ -114,53 +114,14 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
         log.info("Spaceship was created successfully");
     }
 
-    public long readFlightDistance() {
-        Scanner scanner = new Scanner(System.in);
-        while(true) {
-            System.out.println("Enter flight distance:");
-            try{
-                return Long.parseLong(scanner.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid value was entered. Please try again.");
-            }
-        }
-    }
-
-    public Map<Role, Short> readCrewMap() {
-        Scanner scanner = new Scanner(System.in);
-        Map<Role, Short> crew = new HashMap<>();
-        int countOfRoles = Role.values().length;
-        while(countOfRoles > 0) {
-            System.out.println("Enter the number of " + Role.resolveRoleById(countOfRoles) + " in the crew:");
-            try {
-                crew.put(Role.resolveRoleById(countOfRoles), Short.parseShort(scanner.nextLine()));
-                countOfRoles--;
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid value was entered. Please try again.");
-            }
-        }
-        return crew;
-    }
-
     public void generateRandomSpaceship() {
-        Random random = new Random();
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
         System.out.println("Generating new spaceship...");
         System.out.println("Enter unique name:");
         String name = scanner.nextLine();
-
         Long flightDistance = (long) random.nextInt(1000000);
-        Map<Role, Short> crewMap = new HashMap<>();
-        int sumCrew = 0, temp;
-        for (int i = 1; i <= Role.values().length; i++) {
-            temp = random.nextInt(4);
-            crewMap.put(Role.resolveRoleById(i), (short) temp);
-            sumCrew += temp;
-        }
-        if (sumCrew == 0){
-            crewMap.put(Role.COMMANDER, (short) 1);
-        }
-
+        Map<Role, Short> crewMap = generateCrewRoles();
         Spaceship spaceship;
         while (true) {
             try {
@@ -175,5 +136,20 @@ public class ApplicationSpaceshipMenu implements ApplicationMenu {
         clearConsole();
         System.out.println(spaceship.toString() + " was created successfully\n");
         log.info("Spaceship was generated successfully");
+    }
+
+    private Map<Role, Short> generateCrewRoles() {
+        Random random = new Random();
+        Map<Role, Short> crewMap = new HashMap<>();
+        int sumCrew = 0, temp;
+        for (int i = 1; i <= Role.values().length; i++) {
+            temp = random.nextInt(4);
+            crewMap.put(Role.resolveRoleById(i), (short) temp);
+            sumCrew += temp;
+        }
+        if (sumCrew == 0) {
+            crewMap.put(Role.COMMANDER, (short) 1);
+        }
+        return crewMap;
     }
 }

@@ -25,7 +25,7 @@ public class SpaceshipFactory implements EntityFactory<Spaceship> {
 
     @Override
     @SuppressWarnings("unchecked")
-    public Spaceship create(Object ... args) throws DuplicateEntityNameException {
+    public Spaceship create(Object... args) throws DuplicateEntityNameException {
         Spaceship spaceship;
         try {
             spaceship = new Spaceship(String.valueOf(args[0]),

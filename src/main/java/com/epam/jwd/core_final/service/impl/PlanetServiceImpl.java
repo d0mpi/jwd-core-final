@@ -6,13 +6,13 @@ import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.service.PlanetService;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
 @Slf4j
 public class PlanetServiceImpl implements PlanetService {
-    private final ArrayList<Planet> planets = new ArrayList<>(NassaContext.getInstance().retrieveBaseEntityList(Planet.class));
+    private final LinkedList<Planet> planets = new LinkedList<>(NassaContext.getInstance().retrieveBaseEntityList(Planet.class));
 
 
     private static class SingletonHolder {

@@ -1,11 +1,14 @@
 package com.epam.jwd.core_final.criteria;
 
+import com.epam.jwd.core_final.context.impl.NassaContext;
+import com.epam.jwd.core_final.domain.FlightMission;
 import com.epam.jwd.core_final.domain.Role;
 import com.epam.jwd.core_final.domain.Spaceship;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * Should be a builder for {@link Spaceship} fields

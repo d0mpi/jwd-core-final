@@ -3,13 +3,14 @@ package com.epam.jwd.core_final.context.impl;
 import com.epam.jwd.core_final.context.ApplicationMenu;
 import com.epam.jwd.core_final.criteria.CrewMemberCriteria;
 import com.epam.jwd.core_final.domain.CrewMember;
+import com.epam.jwd.core_final.domain.OutputTemplates;
 import com.epam.jwd.core_final.domain.Rank;
 import com.epam.jwd.core_final.domain.Role;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.CrewMemberFactory;
-import com.epam.jwd.core_final.domain.OutputTemplates;
 import com.epam.jwd.core_final.service.impl.CrewServiceImpl;
 import com.epam.jwd.core_final.util.iostreamImpl.CrewReadFileStream;
+import com.epam.jwd.core_final.util.iostreamImpl.CrewWriteConsoleStream;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedList;
@@ -59,7 +60,7 @@ public class ApplicationCrewMenu implements ApplicationMenu {
                 clearConsole();
                 showAllCrewMembers();
                 printAvailableOptions();
-                readMenuOptionInput( OutputTemplates.CREW_MEMBER_MENU.getOptionNum());
+                readMenuOptionInput(OutputTemplates.CREW_MEMBER_MENU.getOptionNum());
             case 4:
                 clearConsole();
                 showAvailableCrewMembers();
@@ -75,21 +76,20 @@ public class ApplicationCrewMenu implements ApplicationMenu {
 
     public void showAllCrewMembers() {
         LinkedList<CrewMember> crewMembers = new LinkedList<>(CrewServiceImpl.getInstance().findAllCrewMembers());
-        for (CrewMember crewMember : crewMembers) {
-            System.out.println(crewMember.toString());
+        if (crewMembers.size() != 0) {
+            CrewWriteConsoleStream.getInstance().writeData(crewMembers);
+        } else {
+            System.out.println("No crew members has been created yet");
         }
-        System.out.println();
     }
 
     public void showAvailableCrewMembers() {
         LinkedList<CrewMember> crewMembers = new LinkedList<>(CrewServiceImpl.getInstance().
                 findAllCrewMembersByCriteria(CrewMemberCriteria.builder().isReadyForNextMission(true).build()));
         if (crewMembers.size() != 0) {
-            for (CrewMember crewMember : crewMembers) {
-                System.out.println(crewMember.toString());
-            }
+            CrewWriteConsoleStream.getInstance().writeData(crewMembers);
         } else {
-            System.out.println("No crew members has been created yet");
+            System.out.println("No crew members are available yet");
         }
         System.out.println();
     }

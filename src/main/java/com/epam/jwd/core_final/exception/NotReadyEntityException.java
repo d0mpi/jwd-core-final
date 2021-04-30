@@ -1,6 +1,6 @@
 package com.epam.jwd.core_final.exception;
 
-public class NotReadyEntityException extends Exception{
+public class NotReadyEntityException extends Exception {
     private final String entityName;
 
     public NotReadyEntityException(String entityName) {

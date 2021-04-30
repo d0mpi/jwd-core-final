@@ -37,7 +37,7 @@ public class CrewServiceImpl implements CrewService {
 
     @Override
     public List<CrewMember> findAllCrewMembersByCriteria(Criteria<? extends CrewMember> criteria) {
-        return buildFilter((CrewMemberCriteria)criteria).collect(Collectors.toList());
+        return buildFilter((CrewMemberCriteria) criteria).collect(Collectors.toList());
     }
 
     @Override
@@ -63,10 +63,10 @@ public class CrewServiceImpl implements CrewService {
 
     @Override
     public void assignCrewMemberOnMission(CrewMember crewMember) throws NotReadyEntityException {
-        if(crewMember.getIsReadyForNextMission()) {
+        if (crewMember.getIsReadyForNextMission()) {
             crewMembers.stream().
-            filter(crewMember1 -> crewMember.getName().equals(crewMember1.getName())).
-            forEach(crewMember1 -> crewMember1.setIsReadyForNextMission(false));
+                    filter(crewMember1 -> crewMember.getName().equals(crewMember1.getName())).
+                    forEach(crewMember1 -> crewMember1.setIsReadyForNextMission(false));
         } else {
             throw new NotReadyEntityException(crewMember.getName());
         }
@@ -76,7 +76,7 @@ public class CrewServiceImpl implements CrewService {
     public void createCrewMember(CrewMember crewMember) throws DuplicateEntityNameException {
         CrewMember duplicateCrewMember = crewMembers.stream().
                 filter(member -> member.getName().equalsIgnoreCase(crewMember.getName())).findFirst().orElse(null);
-        if(duplicateCrewMember != null){
+        if (duplicateCrewMember != null) {
             throw new DuplicateEntityNameException(crewMember.getName());
         } else {
             crewMembers.add(crewMember);

@@ -24,7 +24,7 @@ public class FlightMissionFactory implements EntityFactory<FlightMission> {
     }
 
     @Override
-    public FlightMission create(Object... args) throws DuplicateEntityNameException{
+    public FlightMission create(Object... args) throws DuplicateEntityNameException {
         FlightMission flightMission;
         try {
             flightMission = new FlightMission(String.valueOf(args[0]),

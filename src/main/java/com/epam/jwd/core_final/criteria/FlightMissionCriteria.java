@@ -1,6 +1,10 @@
 package com.epam.jwd.core_final.criteria;
 
-import com.epam.jwd.core_final.domain.*;
+import com.epam.jwd.core_final.domain.CrewMember;
+import com.epam.jwd.core_final.domain.FlightMission;
+import com.epam.jwd.core_final.domain.MissionResult;
+import com.epam.jwd.core_final.domain.Planet;
+import com.epam.jwd.core_final.domain.Spaceship;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
@@ -49,11 +53,11 @@ public class FlightMissionCriteria extends Criteria<FlightMission> {
         this.to = to;
     }
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
 
-    public static class Builder{
+    public static class Builder {
         private Long id;
         private String name;
         private LocalDate startDate;
@@ -65,47 +69,57 @@ public class FlightMissionCriteria extends Criteria<FlightMission> {
         private Planet from;
         private Planet to;
 
-        public Builder id(Long id){
+        public Builder id(Long id) {
             this.id = id;
             return this;
         }
-        public Builder name(String name){
+
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
-        public Builder startDate(LocalDate startDate){
+
+        public Builder startDate(LocalDate startDate) {
             this.startDate = startDate;
             return this;
         }
-        public Builder endDate(LocalDate endDate){
+
+        public Builder endDate(LocalDate endDate) {
             this.endDate = endDate;
             return this;
         }
-        public Builder distance(Long distance){
+
+        public Builder distance(Long distance) {
             this.distance = distance;
             return this;
         }
-        public Builder assignedSpaceship(Spaceship assignedSpaceship){
+
+        public Builder assignedSpaceship(Spaceship assignedSpaceship) {
             this.assignedSpaceship = assignedSpaceship;
             return this;
         }
-        public Builder id(List<CrewMember> assignedCrew){
+
+        public Builder id(List<CrewMember> assignedCrew) {
             this.assignedCrew = assignedCrew;
             return this;
         }
-        public Builder missionResult(MissionResult missionResult){
+
+        public Builder missionResult(MissionResult missionResult) {
             this.missionResult = missionResult;
             return this;
         }
-        public Builder from(Planet from){
+
+        public Builder from(Planet from) {
             this.from = from;
             return this;
         }
-        public Builder to(Planet to){
+
+        public Builder to(Planet to) {
             this.to = to;
             return this;
         }
-        public FlightMissionCriteria build(){
+
+        public FlightMissionCriteria build() {
             return new FlightMissionCriteria(id, name,
                     startDate, endDate,
                     distance, assignedSpaceship,

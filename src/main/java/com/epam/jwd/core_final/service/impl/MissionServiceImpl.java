@@ -12,7 +12,7 @@ import com.epam.jwd.core_final.service.MissionService;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -24,16 +24,16 @@ public class MissionServiceImpl implements MissionService {
     private final Collection<FlightMission> flightMissions = NassaContext.getInstance().retrieveBaseEntityList(FlightMission.class);
 
     public void updateAllMissions() {
-        ArrayList<FlightMission> flightMissions = (ArrayList<FlightMission>) findAllMissions();
+        LinkedList<FlightMission> flightMissions = (LinkedList<FlightMission>) findAllMissions();
         LocalDate localDate = NassaContext.getInstance().getCurrentDate();
         for (FlightMission flightMission : flightMissions) {
             if (localDate.isAfter(flightMission.getStartDate()) &&
                     localDate.isBefore(flightMission.getEndDate()) &&
-            !flightMission.getMissionResult().equals(MissionResult.FAILED) ) {
+                    !flightMission.getMissionResult().equals(MissionResult.FAILED)) {
                 flightMission.setMissionResult(MissionResult.IN_PROGRESS);
             } else if (localDate.isAfter(flightMission.getEndDate()) &&
                     !flightMission.getMissionResult().equals(MissionResult.FAILED) &&
-            !flightMission.getMissionResult().equals(MissionResult.COMPLETED)) {
+                    !flightMission.getMissionResult().equals(MissionResult.COMPLETED)) {
                 flightMission.setMissionResult(MissionResult.COMPLETED);
                 Spaceship spaceship = flightMission.getAssignedSpaceship();
                 spaceship.setIsReadyForNextMission(true);
@@ -150,7 +150,6 @@ public class MissionServiceImpl implements MissionService {
         if (flightMissionCriteria.getTo() != null) {
             stream = stream.filter(flightMission -> flightMission.getTo().equals(flightMissionCriteria.getTo()));
         }
-
         return stream;
     }
 }

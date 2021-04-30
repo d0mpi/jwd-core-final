@@ -29,39 +29,44 @@ public class CrewMemberCriteria extends Criteria<CrewMember> {
         this.isReadyForNextMission = isReadyForNextMission;
     }
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
 
-    public static class Builder{
+    public static class Builder {
         private Long id;
         private String name;
         private Role role;
         private Rank rank;
         private Boolean isReadyForNextMission;
 
-        public Builder id(Long id){
+        public Builder id(Long id) {
             this.id = id;
             return this;
         }
-        public Builder name(String name){
+
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
-        public Builder role(Role role){
+
+        public Builder role(Role role) {
             this.role = role;
             return this;
         }
-        public Builder rank(Rank rank){
+
+        public Builder rank(Rank rank) {
             this.rank = rank;
             return this;
         }
-        public Builder isReadyForNextMission(Boolean isReadyForNextMission){
+
+        public Builder isReadyForNextMission(Boolean isReadyForNextMission) {
             this.isReadyForNextMission = isReadyForNextMission;
             return this;
         }
-        public CrewMemberCriteria build(){
-            return new CrewMemberCriteria(id,name,role,rank,isReadyForNextMission);
+
+        public CrewMemberCriteria build() {
+            return new CrewMemberCriteria(id, name, role, rank, isReadyForNextMission);
         }
     }
 }

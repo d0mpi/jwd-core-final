@@ -1,17 +1,17 @@
 package com.epam.jwd.core_final.context.impl;
 
 import com.epam.jwd.core_final.context.ApplicationMenu;
+import com.epam.jwd.core_final.domain.OutputTemplates;
 import com.epam.jwd.core_final.domain.Planet;
 import com.epam.jwd.core_final.domain.Point;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.PlanetFactory;
 import com.epam.jwd.core_final.service.impl.PlanetServiceImpl;
-import com.epam.jwd.core_final.domain.OutputTemplates;
-import com.epam.jwd.core_final.util.iostreamImpl.PlanetReadFileStream;
+import com.epam.jwd.core_final.util.iostreamImpl.PlanetReadConsoleStream;
+import com.epam.jwd.core_final.util.iostreamImpl.PlanetWriteConsoleStream;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedList;
-import java.util.Random;
 import java.util.Scanner;
 
 @Slf4j
@@ -67,15 +67,11 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
 
     private void showAllPlanets() {
         LinkedList<Planet> planets = new LinkedList<>(PlanetServiceImpl.getInstance().findAllPlanets());
-        for (Planet planet : planets) {
-            System.out.println(planet.toString());
-        }
-        System.out.println();
+        PlanetWriteConsoleStream.getInstance().writeData(planets);
     }
 
     private void generatePlanet() {
         Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
         System.out.println("Generating new planet...");
         System.out.println("Enter unique planet name:");
         String name = scanner.nextLine();
@@ -88,20 +84,18 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
                                 PlanetServiceImpl.getInstance().generateRandomCoordinate()));
                 break;
             } catch (DuplicateEntityNameException e) {
-                log.error("Trying to create duplicate planet");
+                log.error("Trying to create duplicate planet " + e.getMessage());
                 System.out.println("Planet with this name already exists. Please enter name again:");
                 name = scanner.nextLine();
             }
         }
         clearConsole();
         System.out.println(planet.toString() + " was created successfully\n");
-        log.info("Planet was generated successfully");
+        log.info("Planet " + planet + " was generated successfully");
     }
-
 
     private void createPlanet() {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Creating new planet...");
         System.out.println("Enter unique planet name:");
         String name = scanner.nextLine();
@@ -110,8 +104,8 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
         while (true) {
             try {
                 planet = PlanetFactory.getInstance().create(name,
-                        new Point(PlanetReadFileStream.getInstance().readCoordinate('X'),
-                                PlanetReadFileStream.getInstance().readCoordinate('Y')));
+                        new Point(PlanetReadConsoleStream.getInstance().readCoordinate('X'),
+                                PlanetReadConsoleStream.getInstance().readCoordinate('Y')));
                 break;
             } catch (DuplicateEntityNameException e) {
                 log.error("Attempt to generate duplicate planet");
@@ -121,6 +115,6 @@ public class ApplicationPlanetMenu implements ApplicationMenu {
         }
         clearConsole();
         System.out.println(planet.toString() + " was created successfully\n");
-        log.info("Planet was created successfully");
+        log.info("Planet " + planet + " was created successfully");
     }
 }

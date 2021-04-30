@@ -65,16 +65,5 @@ public class PlanetReadFileStream implements ReadStream {
         }
     }
 
-    public int readCoordinate(char name) {
-        Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("Enter " + name + " planet coordinate:");
-            if (scanner.hasNextInt()) {
-                return scanner.nextInt();
-            } else {
-                System.out.println("Invalid value was entered. Please try again.");
-            }
-        } while (true);
-    }
 
 }

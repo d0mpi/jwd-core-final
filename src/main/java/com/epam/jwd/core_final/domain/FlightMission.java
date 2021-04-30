@@ -66,7 +66,7 @@ public class FlightMission extends AbstractBaseEntity {
                 "\nstartDate=" + startDate +
                 ", endDate=" + endDate +
                 ", distance=" + distance;
-        if (!missionResult.equals(MissionResult.FAILED) && assignedSpaceship!=null && assignedCrew != null) {
+        if (!missionResult.equals(MissionResult.FAILED) && assignedSpaceship != null && assignedCrew != null) {
             text += ", assignedSpaceship=" + assignedSpaceship +
                     "\nAssignedCrew= {"
                     + assignedCrew;

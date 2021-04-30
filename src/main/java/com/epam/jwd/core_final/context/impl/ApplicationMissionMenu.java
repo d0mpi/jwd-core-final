@@ -3,22 +3,36 @@ package com.epam.jwd.core_final.context.impl;
 import com.epam.jwd.core_final.context.ApplicationMenu;
 import com.epam.jwd.core_final.criteria.CrewMemberCriteria;
 import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
-import com.epam.jwd.core_final.domain.*;
+import com.epam.jwd.core_final.domain.ApplicationProperties;
+import com.epam.jwd.core_final.domain.CrewMember;
+import com.epam.jwd.core_final.domain.FlightMission;
+import com.epam.jwd.core_final.domain.MissionResult;
+import com.epam.jwd.core_final.domain.OutputTemplates;
+import com.epam.jwd.core_final.domain.Planet;
+import com.epam.jwd.core_final.domain.Role;
+import com.epam.jwd.core_final.domain.Spaceship;
 import com.epam.jwd.core_final.exception.DuplicateEntityNameException;
 import com.epam.jwd.core_final.factory.impl.FlightMissionFactory;
-import com.epam.jwd.core_final.domain.OutputTemplates;
-import com.epam.jwd.core_final.util.runnableImpl.ConsoleTimetableRunnable;
-import com.epam.jwd.core_final.util.iostreamImpl.MissionsSerializeToFileStream;
 import com.epam.jwd.core_final.service.impl.CrewServiceImpl;
 import com.epam.jwd.core_final.service.impl.MissionServiceImpl;
 import com.epam.jwd.core_final.service.impl.PlanetServiceImpl;
 import com.epam.jwd.core_final.service.impl.SpaceshipServiceImpl;
+import com.epam.jwd.core_final.util.iostreamImpl.MissionWriteConsoleStream;
+import com.epam.jwd.core_final.util.iostreamImpl.MissionsSerializeToFileStream;
+import com.epam.jwd.core_final.util.runnableImpl.ConsoleTimetableRunnable;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.LinkedList;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -65,7 +79,7 @@ public class ApplicationMissionMenu implements ApplicationMenu {
                 readMenuOptionInput(OutputTemplates.MISSION_MENU.getOptionNum());
             case 3:
                 clearConsole();
-                writeAllFlightMissions();
+                writeFlightMissionsToFile();
                 printAvailableOptions();
                 readMenuOptionInput(OutputTemplates.MISSION_MENU.getOptionNum());
             case 4:
@@ -88,6 +102,11 @@ public class ApplicationMissionMenu implements ApplicationMenu {
         System.out.println("Enter something to return to mission menu: ");
     }
 
+    public void showAllMissions() {
+        LinkedList<FlightMission> flightMissions = (LinkedList<FlightMission>) MissionServiceImpl.getInstance().findAllMissions();
+        MissionWriteConsoleStream.getInstance().writeData(flightMissions);
+    }
+
     private void startRealtimeTimetableToConsole() {
         scheduledFuture = realtimeTimetableToConsole.scheduleAtFixedRate(ConsoleTimetableRunnable.getInstance(), 0,
                 ApplicationProperties.getInstance().getFileRefreshRate(), TimeUnit.SECONDS);
@@ -98,38 +117,11 @@ public class ApplicationMissionMenu implements ApplicationMenu {
     }
 
     private void generateRandomMission() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Generating new mission...");
-        System.out.println("Enter unique mission name:");
-        String name = scanner.nextLine();
-
-        Planet planetFrom = PlanetServiceImpl.getInstance().getRandomPlanet();
-        Planet planetTo = PlanetServiceImpl.getInstance().getRandomPlanet();
-        while (planetTo.equals(planetFrom)) {
-            planetTo = PlanetServiceImpl.getInstance().getRandomPlanet();
-        }
-
-        Long distance = PlanetServiceImpl.getInstance().getDistanceBetweenPlanets(planetFrom, planetTo);
-
+        FlightMission flightMission = tryToGenerateMission();
         Spaceship spaceship = SpaceshipServiceImpl.getInstance().findSpaceshipByCriteria(
-                SpaceshipCriteria.builder().isReadyForNextMission(true).minFlightDistance(distance).build()).orElse(null);
+                SpaceshipCriteria.builder().isReadyForNextMission(true).
+                        minFlightDistance(flightMission.getDistance()).build()).orElse(null);
 
-        Random random = new Random();
-        LocalDate date = NassaContext.getInstance().getCurrentDate();
-        FlightMission flightMission;
-        while (true) {
-            try {
-                flightMission = FlightMissionFactory.getInstance().create(
-                        name, date.plusDays(random.nextInt(20)), date.plusDays(random.nextInt(200) + 21), distance, planetFrom, planetTo);
-                break;
-            } catch (DuplicateEntityNameException e) {
-                log.error("Trying to create duplicate mission");
-                System.out.println("Mission with this name already exists. Please enter name again");
-                name = scanner.nextLine();
-            }
-        }
-
-        //fail mission no spaceship
         if (spaceship == null) {
             System.out.println("There is no spaceship suitable for the mission");
             log.error("Mission was not create");
@@ -138,7 +130,7 @@ public class ApplicationMissionMenu implements ApplicationMenu {
             return;
         }
 
-        ArrayList<CrewMember> crewMembers = findRightCrewMembers(spaceship);
+        LinkedList<CrewMember> crewMembers = findRightCrewMembers(spaceship);
         if (crewMembers == null) {
             System.out.println("There is no crew members suitable for the mission");
             log.error("Mission was not create");
@@ -162,10 +154,42 @@ public class ApplicationMissionMenu implements ApplicationMenu {
         log.info("Mission was generated successfully");
     }
 
-    private ArrayList<CrewMember> findRightCrewMembers(Spaceship spaceship) {
-        ArrayList<CrewMember> resultCrew = new ArrayList<>();
+    private FlightMission tryToGenerateMission() {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        System.out.println("Generating new mission...");
+        System.out.println("Enter unique mission name:");
+        String name = scanner.nextLine();
+        FlightMission flightMission;
+
+        Planet planetFrom = PlanetServiceImpl.getInstance().getRandomPlanet();
+        Planet planetTo = PlanetServiceImpl.getInstance().getRandomPlanet();
+        while (planetTo.equals(planetFrom)) {
+            planetTo = PlanetServiceImpl.getInstance().getRandomPlanet();
+        }
+        Long distance = PlanetServiceImpl.getInstance().getDistanceBetweenPlanets(planetFrom, planetTo);
+
+        LocalDate date = NassaContext.getInstance().getCurrentDate();
+
+        while (true) {
+            try {
+                flightMission = FlightMissionFactory.getInstance().create(
+                        name, date.plusDays(random.nextInt(20)), date.plusDays(random.nextInt(200) + 21), distance, planetFrom, planetTo);
+                break;
+            } catch (DuplicateEntityNameException e) {
+                log.error("Trying to create duplicate mission");
+                System.out.println("Mission with this name already exists. Please enter name again");
+                name = scanner.nextLine();
+            }
+        }
+
+        return flightMission;
+    }
+
+    private LinkedList<CrewMember> findRightCrewMembers(Spaceship spaceship) {
+        LinkedList<CrewMember> resultCrew = new LinkedList<>();
         for (Map.Entry<Role, Short> entry : spaceship.getCrew().entrySet()) {
-            ArrayList<CrewMember> rightCrewMember = new ArrayList<>(CrewServiceImpl.getInstance().findAllCrewMembersByCriteria(CrewMemberCriteria.builder().
+            LinkedList<CrewMember> rightCrewMember = new LinkedList<>(CrewServiceImpl.getInstance().findAllCrewMembersByCriteria(CrewMemberCriteria.builder().
                     role(entry.getKey()).isReadyForNextMission(true).build()));
             if (rightCrewMember.size() < entry.getValue()) {
                 return null;
@@ -175,24 +199,14 @@ public class ApplicationMissionMenu implements ApplicationMenu {
         return resultCrew;
     }
 
-    private void writeAllFlightMissions() {
+    private void writeFlightMissionsToFile() {
         try {
-            MissionsSerializeToFileStream.getInstance().writeMissionsResult(MissionServiceImpl.getInstance().findAllMissions());
+            MissionsSerializeToFileStream.getInstance().writeData(MissionServiceImpl.getInstance().findAllMissions());
         } catch (IOException e) {
             log.error("Error during writing to file");
             System.out.println("Error during writing to file");
         }
     }
 
-    private void showAllMissions() {
-        LinkedList<FlightMission> flightMissions = new LinkedList<>(MissionServiceImpl.getInstance().findAllMissions());
-        if (flightMissions.size() != 0) {
-            for (FlightMission flightMission : flightMissions) {
-                System.out.println(flightMission.toString());
-            }
-        } else {
-            System.out.println("No mission has been created yet");
-        }
-        System.out.println();
-    }
+
 }
