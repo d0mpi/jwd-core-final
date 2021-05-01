@@ -3,7 +3,6 @@ package com.epam.jwd.core_final.context.impl;
 import com.epam.jwd.core_final.context.ApplicationMenu;
 import com.epam.jwd.core_final.criteria.CrewMemberCriteria;
 import com.epam.jwd.core_final.criteria.SpaceshipCriteria;
-import com.epam.jwd.core_final.domain.ApplicationProperties;
 import com.epam.jwd.core_final.domain.CrewMember;
 import com.epam.jwd.core_final.domain.FlightMission;
 import com.epam.jwd.core_final.domain.MissionResult;
@@ -25,14 +24,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.LinkedList;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -47,9 +41,6 @@ public class ApplicationMissionMenu implements ApplicationMenu {
 
     private ApplicationMissionMenu() {
     }
-
-    private final ScheduledExecutorService realtimeTimetableToConsole = Executors.newSingleThreadScheduledExecutor();
-    private Future<?> scheduledFuture;
 
     @Override
     public void getApplicationContext() {
@@ -84,8 +75,8 @@ public class ApplicationMissionMenu implements ApplicationMenu {
                 readMenuOptionInput(OutputTemplates.MISSION_MENU.getOptionNum());
             case 4:
                 clearConsole();
-                startRealtimeTimetableToConsole();
-                waitUserInput();
+                ConsoleTimetableRunnable.getInstance().startRealtimeTimetableToConsole();
+                waitToCloseTimetable();
             case 5:
                 ApplicationMainMenu.getInstance().getApplicationContext();
             default:
@@ -94,10 +85,10 @@ public class ApplicationMissionMenu implements ApplicationMenu {
         }
     }
 
-    private void waitUserInput() {
+    private void waitToCloseTimetable() {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
-        pauseTimetable();
+        ConsoleTimetableRunnable.getInstance().pauseTimetable();
         this.getApplicationContext();
         System.out.println("Enter something to return to mission menu: ");
     }
@@ -107,17 +98,9 @@ public class ApplicationMissionMenu implements ApplicationMenu {
         MissionWriteConsoleStream.getInstance().writeData(flightMissions);
     }
 
-    private void startRealtimeTimetableToConsole() {
-        scheduledFuture = realtimeTimetableToConsole.scheduleAtFixedRate(ConsoleTimetableRunnable.getInstance(), 0,
-                ApplicationProperties.getInstance().getFileRefreshRate(), TimeUnit.SECONDS);
-    }
-
-    private void pauseTimetable() {
-        scheduledFuture.cancel(true);
-    }
 
     private void generateRandomMission() {
-        FlightMission flightMission = tryToGenerateMission();
+        FlightMission flightMission = tryToGenerateRawMission();
         Spaceship spaceship = SpaceshipServiceImpl.getInstance().findSpaceshipByCriteria(
                 SpaceshipCriteria.builder().isReadyForNextMission(true).
                         minFlightDistance(flightMission.getDistance()).build()).orElse(null);
@@ -154,7 +137,7 @@ public class ApplicationMissionMenu implements ApplicationMenu {
         log.info("Mission was generated successfully");
     }
 
-    private FlightMission tryToGenerateMission() {
+    private FlightMission tryToGenerateRawMission() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         System.out.println("Generating new mission...");
@@ -202,6 +185,7 @@ public class ApplicationMissionMenu implements ApplicationMenu {
     private void writeFlightMissionsToFile() {
         try {
             MissionsSerializeToFileStream.getInstance().writeData(MissionServiceImpl.getInstance().findAllMissions());
+            System.out.println("Missions have been written to file successfully\n");
         } catch (IOException e) {
             log.error("Error during writing to file");
             System.out.println("Error during writing to file");

@@ -2,14 +2,26 @@ package com.epam.jwd.core_final.util.runnableImpl;
 
 import com.epam.jwd.core_final.context.impl.ApplicationMissionMenu;
 import com.epam.jwd.core_final.context.impl.NassaContext;
+import com.epam.jwd.core_final.domain.ApplicationProperties;
 import com.epam.jwd.core_final.domain.CrewMember;
 import com.epam.jwd.core_final.domain.FlightMission;
 import com.epam.jwd.core_final.domain.MissionResult;
 import com.epam.jwd.core_final.service.impl.MissionServiceImpl;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class ConsoleTimetableRunnable implements Runnable {
+    @Getter
+    private final ScheduledExecutorService realtimeTimetableToConsole = Executors.newSingleThreadScheduledExecutor();
+    @Getter
+    private Future<?> scheduledFuture;
+
 
     private static class SingletonHolder {
         private static final ConsoleTimetableRunnable instance = new ConsoleTimetableRunnable();
@@ -69,6 +81,16 @@ public class ConsoleTimetableRunnable implements Runnable {
             }
         }
         System.out.println("Enter something to return to mission menu: ");
+    }
+
+
+    public void startRealtimeTimetableToConsole() {
+        this.scheduledFuture = realtimeTimetableToConsole.scheduleAtFixedRate(ConsoleTimetableRunnable.getInstance(), 0,
+                ApplicationProperties.getInstance().getFileRefreshRate(), TimeUnit.SECONDS);
+    }
+
+    public void pauseTimetable() {
+        scheduledFuture.cancel(true);
     }
 
     private void upgradeMissions() {
