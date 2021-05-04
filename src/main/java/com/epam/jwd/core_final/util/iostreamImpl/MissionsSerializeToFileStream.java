@@ -2,6 +2,7 @@ package com.epam.jwd.core_final.util.iostreamImpl;
 
 import com.epam.jwd.core_final.domain.AbstractBaseEntity;
 import com.epam.jwd.core_final.domain.ApplicationProperties;
+import com.epam.jwd.core_final.domain.FlightMission;
 import com.epam.jwd.core_final.util.WriteStream;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Slf4j
-public class MissionsSerializeToFileStream implements WriteStream {
+public class MissionsSerializeToFileStream implements WriteStream<FlightMission> {
     private static class SingletonHolder {
         private static final MissionsSerializeToFileStream instance = new MissionsSerializeToFileStream();
     }
@@ -24,7 +25,7 @@ public class MissionsSerializeToFileStream implements WriteStream {
     }
 
     @Override
-    public <T extends AbstractBaseEntity> void writeData(List<T> flightMissions) throws IOException {
+    public void writeData(List<FlightMission> flightMissions) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         char fileSeparator = File.separatorChar;
         File file = new File(

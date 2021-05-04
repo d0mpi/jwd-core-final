@@ -21,14 +21,20 @@ public class PlanetReadConsoleStream {
 
     public int readCoordinate(char name) {
         Scanner scanner = new Scanner(System.in);
-        do {
+        while (true) {
             System.out.println("Enter " + name + " planet coordinate:");
-            if (scanner.hasNextInt()) {
-                return scanner.nextInt();
-            } else {
+            int coordinate;
+            try {
+                coordinate = Integer.parseInt(scanner.nextLine());
+                if (coordinate > 0) {
+                    return coordinate;
+                } else {
+                    System.out.println("Invalid value was entered. Please try again.");
+                }
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid value was entered. Please try again.");
             }
-        } while (true);
+        }
     }
 
     public long readFlightDistance() {
